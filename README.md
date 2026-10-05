@@ -3,7 +3,7 @@
 Elektronik kör yük (electronic dummy load) cihazının ilk stabil versiyonu.
 150 W ile sınırlandırılmış, 30 V / 10 A aralığını destekler.
 
-Proje detayları ve görseller: https://omerikinci.github.io/projects/electronic-dummy-load.html
+Proje detayları ve görseller: https://omerikinci.com/projects/electronic-dummy-load
 
 ## İçerik
 
