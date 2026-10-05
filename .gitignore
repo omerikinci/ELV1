@@ -1,0 +1,23 @@
+# Build outputs
+Debug/
+Release/
+build/
+*.o
+*.d
+*.elf
+*.bin
+*.hex
+*.map
+*.list
+*.su
+*.launch
+
+# STM32CubeIDE
+.metadata/
+RemoteSystemsTempFiles/
+*.launch
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store

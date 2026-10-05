@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "xt60-IRFP260N")(type "KiCad")(uri "${KIPRJMOD}/xt60-IRFP260N.kicad_sym")(options "")(descr ""))
+)
