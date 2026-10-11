@@ -6447,7 +6447,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "my-NMOS:IRFP260NPBF"
+		(symbol "myNMOS:IRFP260NPBF"
 			(pin_numbers
 				(hide yes)
 			)
@@ -6775,7 +6775,7 @@
 					)
 				)
 			)
-			(property "Footprint" "myNTC:Untitled"
+			(property "Footprint" "myNTC:NTC"
 				(at 0 0 0)
 				(effects
 					(font
@@ -16111,7 +16111,7 @@
 			(uuid "f23f20f4-fe86-4945-b2d2-df52f75e446e")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "U11")
 					(unit 1)
@@ -16179,7 +16179,7 @@
 			(uuid "5cd6f77a-6f86-403c-bcb0-be569eb7ded4")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R8")
 					(unit 1)
@@ -16248,7 +16248,7 @@
 			(uuid "776a8a14-9946-4498-b3ac-bb67299d5fc9")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C3")
 					(unit 1)
@@ -16317,7 +16317,7 @@
 			(uuid "5107acbd-528d-42ca-a228-2dc817841b92")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R21")
 					(unit 1)
@@ -16393,7 +16393,7 @@
 			(uuid "be130644-4321-411d-97b9-06b012a754b8")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "D8")
 					(unit 1)
@@ -16462,7 +16462,7 @@
 			(uuid "d710a298-c487-4506-870e-d3b6f4c3d0b3")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C26")
 					(unit 1)
@@ -16529,7 +16529,7 @@
 			(uuid "6693e09d-fcf5-4c77-bfdb-a3d046aca9e7")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R63")
 					(unit 1)
@@ -16674,7 +16674,7 @@
 			(uuid "88b40966-1cb1-4a5c-8481-3c0232015ff1")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C40")
 					(unit 1)
@@ -16742,7 +16742,7 @@
 			(uuid "6888f3b5-d7e3-48db-9987-e2a08fabdbd1")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R29")
 					(unit 1)
@@ -16810,7 +16810,7 @@
 			(uuid "c8a62d93-1230-4122-b4b6-e28f58690f82")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C10")
 					(unit 1)
@@ -16886,7 +16886,7 @@
 			(uuid "a0beacd7-1fb2-42d7-9cd4-59ac7faa2bc3")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "Q3")
 					(unit 1)
@@ -16952,7 +16952,7 @@
 			(uuid "866a09de-182c-4873-bc26-a8361083f2ca")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR062")
 					(unit 1)
@@ -17018,7 +17018,7 @@
 			(uuid "d18d19a0-7063-48e1-980b-c44d047fae14")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR059")
 					(unit 1)
@@ -17086,7 +17086,7 @@
 			(uuid "0c203743-296e-4b4b-9498-f5c65e42080e")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R10")
 					(unit 1)
@@ -17156,7 +17156,7 @@
 			(uuid "04ce034f-3b23-4828-9129-a671550282e8")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C7")
 					(unit 1)
@@ -17225,7 +17225,7 @@
 			(uuid "b1bbb490-2d5c-45bc-a4b5-82476c8573cf")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "D4")
 					(unit 1)
@@ -17292,7 +17292,7 @@
 			(uuid "e2431dee-9224-4af7-a905-f324ac75bdba")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R1")
 					(unit 1)
@@ -17358,7 +17358,7 @@
 			(uuid "c937f537-dc46-49ea-8f15-1f2a9295e819")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR022")
 					(unit 1)
@@ -17428,7 +17428,7 @@
 			(uuid "92985175-e03a-4212-837d-7af1ae293c16")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C46")
 					(unit 1)
@@ -17498,7 +17498,7 @@
 			(uuid "cac34f74-479f-486e-8ccf-f5667e51c05e")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C39")
 					(unit 1)
@@ -17566,7 +17566,7 @@
 			(uuid "b7710cf3-0953-4a98-8352-fd5052121d8b")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R6")
 					(unit 1)
@@ -17705,7 +17705,7 @@
 			(uuid "0e0968fc-4a65-4a36-9584-1253a7a0849e")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C6")
 					(unit 1)
@@ -17773,7 +17773,7 @@
 			(uuid "89651bce-1bdb-42a2-a9e3-a7818ad515a0")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R12")
 					(unit 1)
@@ -17843,7 +17843,7 @@
 			(uuid "4c7c1fd9-2c67-4472-b909-d81a2ecbe801")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C34")
 					(unit 1)
@@ -17912,7 +17912,7 @@
 			(uuid "7fd08edd-6169-40bb-ae6b-1318eafd90fa")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R56")
 					(unit 1)
@@ -17980,7 +17980,7 @@
 			(uuid "8733aabb-8fc3-48ac-bf06-edd8e36a1fe5")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R47")
 					(unit 1)
@@ -18089,7 +18089,7 @@
 			(uuid "99e60a15-45c7-4fdf-938a-7e24f337d060")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "J2")
 					(unit 1)
@@ -18158,7 +18158,7 @@
 			(uuid "a5ddc261-5c7a-4aee-9e41-5c78fa3eb766")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R35")
 					(unit 1)
@@ -18227,7 +18227,7 @@
 			(uuid "7f7c853a-687b-4bd6-a4a4-e12b1912a251")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "Y1")
 					(unit 1)
@@ -18293,7 +18293,7 @@
 			(uuid "e256011e-2d7f-495d-8755-cbef8cac1bbe")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR054")
 					(unit 1)
@@ -18360,7 +18360,7 @@
 			(uuid "3c2ba6b0-82fa-4c88-b58a-ae999ed0e8b0")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R33")
 					(unit 1)
@@ -18426,7 +18426,7 @@
 			(uuid "db1bc242-f6e7-4a29-8032-d98409c3c7f8")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR040")
 					(unit 1)
@@ -18492,7 +18492,7 @@
 			(uuid "72412618-7599-4e19-8885-fcc60c9a5729")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR058")
 					(unit 1)
@@ -18557,7 +18557,7 @@
 			(uuid "407299ee-f609-4028-a308-4945e3c3cfad")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR037")
 					(unit 1)
@@ -18622,7 +18622,7 @@
 			(uuid "79e9a91c-e397-4b3b-a14c-a34672e69ffa")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR015")
 					(unit 1)
@@ -18692,7 +18692,7 @@
 			(uuid "33176d74-9208-4e3f-901f-0b13b19b3f48")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R44")
 					(unit 1)
@@ -18760,7 +18760,7 @@
 			(uuid "dd5a0d25-437e-4406-9e84-06b83fbeb324")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R26")
 					(unit 1)
@@ -18826,7 +18826,7 @@
 			(uuid "1bb1c504-bbad-49b5-ac1e-1aa60776850c")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR061")
 					(unit 1)
@@ -18892,7 +18892,7 @@
 			(uuid "e416ff35-b8f4-49f1-b515-ad2fc6781335")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR030")
 					(unit 1)
@@ -18958,7 +18958,7 @@
 			(uuid "6e721df5-b215-4aa4-81a8-c3f4a9eb94d5")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR039")
 					(unit 1)
@@ -19027,7 +19027,7 @@
 			(uuid "40b61da7-a88e-49d5-9646-d04a57704a64")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C2")
 					(unit 1)
@@ -19093,7 +19093,7 @@
 			(uuid "ce73c38a-e9ce-4f49-8838-3f7a8e031a02")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR014")
 					(unit 1)
@@ -19160,7 +19160,7 @@
 			(uuid "ee521785-adc6-4caf-882b-6959eaa2e956")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR03")
 					(unit 1)
@@ -19228,7 +19228,7 @@
 			(uuid "71d29b49-0bca-4edb-a737-d3c2bc6c0bea")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R3")
 					(unit 1)
@@ -19297,7 +19297,7 @@
 			(uuid "e3a49ac1-8a3b-4c2c-bcde-3f3b01b77d41")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R20")
 					(unit 1)
@@ -19367,7 +19367,7 @@
 			(uuid "f349ed7f-8139-4017-b43a-30db5767a01a")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "D2")
 					(unit 1)
@@ -19433,7 +19433,7 @@
 			(uuid "28002367-d3b8-4d5a-bbaf-1cb9dd67fd72")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR013")
 					(unit 1)
@@ -19501,7 +19501,7 @@
 			(uuid "c595b8aa-9eee-4176-accc-5bee50bbe491")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R4")
 					(unit 1)
@@ -19571,7 +19571,7 @@
 			(uuid "d04221dc-adc4-4401-911c-babc529800c9")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R45")
 					(unit 1)
@@ -19580,7 +19580,7 @@
 		)
 	)
 	(symbol
-		(lib_id "my-NMOS:IRFP260NPBF")
+		(lib_id "myNMOS:IRFP260NPBF")
 		(at 248.92 49.53 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -19736,7 +19736,7 @@
 			(uuid "91d812d2-c74b-4f14-9c14-3f058fd657b2")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR07")
 					(unit 1)
@@ -19802,7 +19802,7 @@
 			(uuid "841c9239-141a-494c-8604-4f34523b9e17")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR053")
 					(unit 1)
@@ -19870,7 +19870,7 @@
 			(uuid "11b44fe0-e4e1-4e4f-9705-a2eb2a9951fe")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R27")
 					(unit 1)
@@ -19938,7 +19938,7 @@
 			(uuid "3686a739-28a0-4f2f-adf3-491d207e6127")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R17")
 					(unit 1)
@@ -20004,7 +20004,7 @@
 			(uuid "870e7a19-9e7f-4ce5-8e0f-642e5e96a731")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR024")
 					(unit 1)
@@ -20073,7 +20073,7 @@
 			(uuid "07ba1147-1e7f-4570-b8b8-0c1af1fb4777")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R19")
 					(unit 1)
@@ -20141,7 +20141,7 @@
 			(uuid "9299a456-aa33-4e58-9ec8-637dba3aad38")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "FB2")
 					(unit 1)
@@ -20210,7 +20210,7 @@
 			(uuid "3d2d1d97-b3e8-469e-9798-3807c8a81f60")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C33")
 					(unit 1)
@@ -20280,7 +20280,7 @@
 			(uuid "96343091-ae7b-4a00-891a-9fd4cd407424")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R31")
 					(unit 1)
@@ -20348,7 +20348,7 @@
 			(uuid "30fa8a77-7b56-4fe1-93fd-a43d0add8532")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R57")
 					(unit 1)
@@ -20418,7 +20418,7 @@
 			(uuid "64caaa30-5c17-48b6-98bd-55c797727282")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R34")
 					(unit 1)
@@ -20487,7 +20487,7 @@
 			(uuid "b75f134c-9b69-4da0-8ec5-f560111d4bca")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C4")
 					(unit 1)
@@ -20555,7 +20555,7 @@
 			(uuid "eca11bce-ea78-46c1-874d-c10daf49ea4b")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R11")
 					(unit 1)
@@ -20624,7 +20624,7 @@
 			(uuid "47efc651-79e5-4926-923a-7a17a09ea3f9")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "J8")
 					(unit 1)
@@ -20690,7 +20690,7 @@
 			(uuid "190a1f61-e1cb-4bf1-9e15-a48df0614da2")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR019")
 					(unit 1)
@@ -20758,7 +20758,7 @@
 			(uuid "e95054f0-9f22-4870-8696-8cddfcb6313a")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R40")
 					(unit 1)
@@ -20867,7 +20867,7 @@
 			(uuid "da3b02d6-d6b1-456b-995b-7d7966c880a4")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "J4")
 					(unit 1)
@@ -20948,7 +20948,7 @@
 			(uuid "0664ace9-edec-447d-bb3c-76ab6a0f93c8")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "U10")
 					(unit 1)
@@ -21017,7 +21017,7 @@
 			(uuid "9969b2c8-e49d-4d85-83ca-b835688ada8e")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C38")
 					(unit 1)
@@ -21167,7 +21167,7 @@
 			(uuid "9f1b7fa5-3670-42fd-bc31-a7044e2fae53")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C23")
 					(unit 1)
@@ -21262,7 +21262,7 @@
 			(uuid "b5aedbe5-2b88-4ee5-a809-8df0351f5720")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "SW1")
 					(unit 1)
@@ -21331,7 +21331,7 @@
 			(uuid "068e2736-e79c-4c0c-8a9f-9d8b2f007751")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R22")
 					(unit 1)
@@ -21398,7 +21398,7 @@
 			(uuid "00f0e58f-8db3-49df-996e-965fa615be38")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "F1")
 					(unit 1)
@@ -21468,7 +21468,7 @@
 			(uuid "a05e3a75-88b1-46bc-842d-0aed69e6367c")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R51")
 					(unit 1)
@@ -21538,7 +21538,7 @@
 			(uuid "5a584495-e4e1-4ac2-825c-99dbb6e73f99")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C48")
 					(unit 1)
@@ -21608,7 +21608,7 @@
 			(uuid "faf491a8-c6ed-4b08-be96-187adfb3af42")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C31")
 					(unit 1)
@@ -21675,7 +21675,7 @@
 			(uuid "fda6b734-4376-4b22-8dc5-33dc4fb4210c")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R60")
 					(unit 1)
@@ -21744,7 +21744,7 @@
 			(uuid "83159d3e-a912-49b2-bf1b-d1ec89866e0d")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R36")
 					(unit 1)
@@ -21810,7 +21810,7 @@
 			(uuid "57f8dbb3-b183-4b07-8cb9-6a381fb5ad13")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR028")
 					(unit 1)
@@ -21876,7 +21876,7 @@
 			(uuid "78623ca6-9771-4e87-9510-b7ef75366e72")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR012")
 					(unit 1)
@@ -21942,7 +21942,7 @@
 			(uuid "9a1c6228-8747-49bc-a244-b9f21215216d")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR036")
 					(unit 1)
@@ -22012,7 +22012,7 @@
 			(uuid "92a04eb1-724e-420d-a836-4f4486ddfede")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R52")
 					(unit 1)
@@ -22080,7 +22080,7 @@
 			(uuid "4bc553bc-5c1c-486b-9f0b-f8c65f376095")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R18")
 					(unit 1)
@@ -22284,7 +22284,7 @@
 			(uuid "cf7a49c2-3d7d-414f-9485-5ad642182222")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR046")
 					(unit 1)
@@ -22352,7 +22352,7 @@
 			(uuid "70d7d3b3-5b23-49bf-9f26-81956ffab8ba")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R48")
 					(unit 1)
@@ -22419,7 +22419,7 @@
 			(uuid "b4f3731c-8cea-49cb-a1bc-eac5db54a102")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R38")
 					(unit 1)
@@ -22453,7 +22453,7 @@
 				)
 			)
 		)
-		(property "Footprint" "myNTC:Untitled"
+		(property "Footprint" "myNTC:NTC"
 			(at 68.58 266.7 0)
 			(effects
 				(font
@@ -22581,7 +22581,7 @@
 			(uuid "83a5461e-0e29-4a91-8082-df9547be5aa9")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R58")
 					(unit 1)
@@ -22651,7 +22651,7 @@
 			(uuid "332ef8f0-3475-473c-86b9-f2d5e0c01d43")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C45")
 					(unit 1)
@@ -22715,7 +22715,7 @@
 			)
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "HS3")
 					(unit 1)
@@ -22782,7 +22782,7 @@
 			(uuid "dec13bbc-2c16-46dc-92e1-f7d1daec9cf7")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R61")
 					(unit 1)
@@ -22914,7 +22914,7 @@
 			(uuid "d50e3ed2-2a52-475e-8a93-f35cd7c660ca")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR052")
 					(unit 1)
@@ -23057,7 +23057,7 @@
 			(uuid "1747b398-820d-445c-958f-788b683e2131")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR027")
 					(unit 1)
@@ -23123,7 +23123,7 @@
 			(uuid "61d7b7d5-aff8-4e22-be9f-780a95ee3934")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR031")
 					(unit 1)
@@ -23189,7 +23189,7 @@
 			(uuid "f1a10431-f68a-4846-a976-91e23223d7fc")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR049")
 					(unit 1)
@@ -23258,7 +23258,7 @@
 			(uuid "2dfdea41-058f-4de3-a418-57c9364eb236")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C42")
 					(unit 1)
@@ -23323,7 +23323,7 @@
 			(uuid "da3023ee-6668-475a-9563-2667a7ee8a33")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR033")
 					(unit 1)
@@ -23392,7 +23392,7 @@
 			(uuid "d0ba9ec3-db55-438b-a4af-418469ed0789")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "FB1")
 					(unit 1)
@@ -23462,7 +23462,7 @@
 			(uuid "30995acb-53fb-4db4-b708-0de01125a2d0")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R59")
 					(unit 1)
@@ -23528,7 +23528,7 @@
 			(uuid "e42883b3-fd03-4a92-8b36-c2d849bcc6ed")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR038")
 					(unit 1)
@@ -23598,7 +23598,7 @@
 			(uuid "fa44c859-6a6b-4c2e-abd3-665dce955103")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C30")
 					(unit 1)
@@ -23664,7 +23664,7 @@
 			(uuid "e4ccf353-ca55-4390-b74b-13b78327d739")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR025")
 					(unit 1)
@@ -23733,7 +23733,7 @@
 			(uuid "1f426330-4a2d-4cd9-9d9e-05dc5cefa8b3")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C29")
 					(unit 1)
@@ -23799,7 +23799,7 @@
 			(uuid "789fcffe-8d2a-4f5c-8e97-0eb2a3038d50")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR016")
 					(unit 1)
@@ -23990,7 +23990,7 @@
 			(uuid "4d149e0f-d9b4-4113-aaf3-7ffa82d3dcae")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C9")
 					(unit 1)
@@ -24057,7 +24057,7 @@
 			(uuid "30128540-5998-4c38-a8bd-fab4d916af29")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR042")
 					(unit 1)
@@ -24125,7 +24125,7 @@
 			(uuid "7357cc80-a8e6-4be1-821e-6d918e23bf41")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R54")
 					(unit 1)
@@ -24191,7 +24191,7 @@
 			(uuid "f52359f3-1be0-4df7-86f3-03e1aedb96d2")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR021")
 					(unit 1)
@@ -24350,7 +24350,7 @@
 			(uuid "087c944e-9479-4806-bcb5-d6bf7af01c32")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR05")
 					(unit 1)
@@ -24416,7 +24416,7 @@
 			(uuid "5dd7c605-7fde-4a3b-973b-0fe0f4f88eef")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR048")
 					(unit 1)
@@ -24481,7 +24481,7 @@
 			(uuid "b2714e75-2067-4da4-8700-482a41b54c59")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR047")
 					(unit 1)
@@ -24623,7 +24623,7 @@
 			(uuid "15ec6c6e-3ba3-4c00-a14d-17d66a7594f8")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "J5")
 					(unit 1)
@@ -24689,7 +24689,7 @@
 			(uuid "a5689e30-4d37-491e-87f1-444bc31a83bb")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR020")
 					(unit 1)
@@ -24757,7 +24757,7 @@
 			(uuid "6842f98a-53be-4048-85fb-ddeb180adf2f")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "L2")
 					(unit 1)
@@ -24821,7 +24821,7 @@
 			)
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "HS4")
 					(unit 1)
@@ -24887,7 +24887,7 @@
 			(uuid "4991b8ba-2dc2-4d37-8bb6-c338a46461ef")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR010")
 					(unit 1)
@@ -24954,7 +24954,7 @@
 			(uuid "c7d4f88c-d1d0-4937-8230-7dd2d42ab875")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R64")
 					(unit 1)
@@ -25019,7 +25019,7 @@
 			(uuid "d754701c-9b3d-4a00-af9d-26d0e06c51e4")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR023")
 					(unit 1)
@@ -25028,7 +25028,7 @@
 		)
 	)
 	(symbol
-		(lib_id "my-NMOS:IRFP260NPBF")
+		(lib_id "myNMOS:IRFP260NPBF")
 		(at 248.92 97.79 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -25118,7 +25118,7 @@
 			(uuid "31a4321a-6117-4b6f-aa52-3a334303d338")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "U6")
 					(unit 1)
@@ -25184,7 +25184,7 @@
 			(uuid "485f81f1-f1dd-4bfe-99de-7429f0de9582")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR02")
 					(unit 1)
@@ -25250,7 +25250,7 @@
 			(uuid "b04215f1-f929-43d7-afe4-bde8b7e5adbc")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR018")
 					(unit 1)
@@ -25317,7 +25317,7 @@
 			(uuid "e57ae36e-7f83-4a87-babc-0ce04bd77c8b")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R39")
 					(unit 1)
@@ -25386,7 +25386,7 @@
 			(uuid "db7790bd-ca22-4ca1-b419-8a6df4fe6f95")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R37")
 					(unit 1)
@@ -25453,7 +25453,7 @@
 			(uuid "89775b37-8eb7-46b3-81b1-540d8a8aabf5")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R62")
 					(unit 1)
@@ -25608,7 +25608,7 @@
 			(uuid "b0e06521-18c5-4786-b26d-30487b871875")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C19")
 					(unit 1)
@@ -25740,7 +25740,7 @@
 			(uuid "88ebdee8-8fd1-49bb-9db7-283dde7f6ac1")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R9")
 					(unit 1)
@@ -25806,7 +25806,7 @@
 			(uuid "89327c9a-2d88-4669-b577-4d748b7cc110")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR06")
 					(unit 1)
@@ -25872,7 +25872,7 @@
 			(uuid "2a4442f0-f000-43ad-a64b-ac5ebe0c4682")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR041")
 					(unit 1)
@@ -25941,7 +25941,7 @@
 			(uuid "117d2e5b-dfbe-449e-9fde-999c1fa2fb48")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R42")
 					(unit 1)
@@ -26011,7 +26011,7 @@
 			(uuid "a1ed4b9c-f844-47c0-8ec5-01cd1bdaa2f2")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C21")
 					(unit 1)
@@ -26078,7 +26078,7 @@
 			(uuid "e29450be-f385-4731-9640-1ff58239af77")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R28")
 					(unit 1)
@@ -26147,7 +26147,7 @@
 			(uuid "5d1cf634-2818-4369-89cc-2a5c4d44c80a")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C43")
 					(unit 1)
@@ -26279,7 +26279,7 @@
 			(uuid "5d8e0d5e-c0c2-4a03-a770-6583ae8d2357")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR050")
 					(unit 1)
@@ -26349,7 +26349,7 @@
 			(uuid "bdd9c97a-d261-4e65-8114-09a39d64fc64")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R50")
 					(unit 1)
@@ -26417,7 +26417,7 @@
 			(uuid "9dce3da8-e3d3-407f-a7db-a82ae5057f22")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C24")
 					(unit 1)
@@ -26561,7 +26561,7 @@
 			(uuid "e6a32379-4ab0-42ba-937a-9d87591ecfa7")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C13")
 					(unit 1)
@@ -26646,7 +26646,7 @@
 			(uuid "e8a0dce2-a96d-4dba-acf0-5a96b12ce30d")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "U2")
 					(unit 3)
@@ -26714,7 +26714,7 @@
 			(uuid "6e4e118d-21d5-44e9-bd9b-0e5461474ab5")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C11")
 					(unit 1)
@@ -26781,7 +26781,7 @@
 			(uuid "1d234eb9-6e44-40b5-8865-dc6de58ebffc")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R41")
 					(unit 1)
@@ -26854,7 +26854,7 @@
 			(uuid "8733309b-3698-4d89-bf82-bc9a35b39754")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "Q4")
 					(unit 1)
@@ -26918,7 +26918,7 @@
 			)
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "HS2")
 					(unit 1)
@@ -26984,7 +26984,7 @@
 			(uuid "49f2a096-e534-4688-b034-11bc73ed8dd4")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR011")
 					(unit 1)
@@ -27060,7 +27060,7 @@
 			(uuid "8199c8a3-2008-4ffc-8565-1cd0be464965")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "D7")
 					(unit 1)
@@ -27069,7 +27069,7 @@
 		)
 	)
 	(symbol
-		(lib_id "my-NMOS:IRFP260NPBF")
+		(lib_id "myNMOS:IRFP260NPBF")
 		(at 248.92 144.78 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -27159,7 +27159,7 @@
 			(uuid "6c2c0096-cd4e-4523-8d47-07fd4fde49a6")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "U12")
 					(unit 1)
@@ -27226,7 +27226,7 @@
 			(uuid "f868ac8e-b5b2-4e08-911c-029f05be1b19")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R46")
 					(unit 1)
@@ -27296,7 +27296,7 @@
 			(uuid "d83233f7-c485-4ba7-9eac-86aee54f7e00")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "J3")
 					(unit 1)
@@ -27364,7 +27364,7 @@
 			(uuid "e3a12bc1-70ed-4dbe-b943-967187dd3654")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R14")
 					(unit 1)
@@ -27434,7 +27434,7 @@
 			(uuid "2e4eaed7-40b9-42ce-a844-29261f650ce1")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C5")
 					(unit 1)
@@ -27503,7 +27503,7 @@
 			(uuid "b8769059-c4c4-4fd3-91fa-f70d54709283")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "BZ1")
 					(unit 1)
@@ -27571,7 +27571,7 @@
 			(uuid "b72c59b0-f5ec-4117-b05f-2e32863ac49a")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R32")
 					(unit 1)
@@ -27637,7 +27637,7 @@
 			(uuid "9e11c480-801f-4a19-b96b-6ec8603da1d9")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR043")
 					(unit 1)
@@ -27707,7 +27707,7 @@
 			(uuid "aebac3ac-7a2d-487e-adad-8234aafa34bc")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C8")
 					(unit 1)
@@ -27774,7 +27774,7 @@
 			(uuid "d9260b90-0d84-4089-a18b-923b04dd420c")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR045")
 					(unit 1)
@@ -27844,7 +27844,7 @@
 			(uuid "24c0efd1-e2f7-4afa-87ad-2ce74422cdd2")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C47")
 					(unit 1)
@@ -27911,7 +27911,7 @@
 			(uuid "7f5c7cd7-5afb-4354-8db2-396bb304ca74")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR044")
 					(unit 1)
@@ -27999,7 +27999,7 @@
 			(uuid "19fa734d-0683-46f7-aaf3-7806f067bf0c")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "D3")
 					(unit 1)
@@ -28064,7 +28064,7 @@
 			(uuid "02372c07-d47c-4420-99ee-92790ab2927a")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR026")
 					(unit 1)
@@ -28134,7 +28134,7 @@
 			(uuid "5426965e-7f00-41c8-83a7-e5f69a8030f3")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C44")
 					(unit 1)
@@ -28204,7 +28204,7 @@
 			(uuid "2628770f-8b86-4407-99b7-75d4106b6c57")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C17")
 					(unit 1)
@@ -28274,7 +28274,7 @@
 			(uuid "9a5add07-9648-4394-9547-692d39d43b2f")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R30")
 					(unit 1)
@@ -28484,7 +28484,7 @@
 			(uuid "b5fe05cc-74f5-4d89-a9aa-28685c258cc3")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R13")
 					(unit 1)
@@ -28554,7 +28554,7 @@
 			(uuid "2e02c4de-dbda-4d19-8aef-39c975327037")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C28")
 					(unit 1)
@@ -28620,7 +28620,7 @@
 			(uuid "46e90e73-f12d-42c0-92b2-f8bd759d8541")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR08")
 					(unit 1)
@@ -28694,7 +28694,7 @@
 			(uuid "5f13e04c-2878-4c84-87d3-494d5321c7d1")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "D1")
 					(unit 1)
@@ -28759,7 +28759,7 @@
 			(uuid "4c4ae789-1ce7-4ace-b39a-8dda960ce29a")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR035")
 					(unit 1)
@@ -28826,7 +28826,7 @@
 			(uuid "5fe78f36-98d6-4e3e-aa3d-5bd1dc3cec78")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R24")
 					(unit 1)
@@ -28893,7 +28893,7 @@
 			(uuid "0c237662-2e4b-4f7d-97e1-43330647a2cc")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R16")
 					(unit 1)
@@ -28963,7 +28963,7 @@
 			(uuid "8cea6ce1-9962-4d8e-9a01-850b536e140d")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C20")
 					(unit 1)
@@ -29033,7 +29033,7 @@
 			(uuid "9253fab5-c801-48b4-ba9b-cd08057d9281")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C27")
 					(unit 1)
@@ -29101,7 +29101,7 @@
 			(uuid "640a146e-8c10-4732-b635-4c4c47f96942")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R7")
 					(unit 1)
@@ -29169,7 +29169,7 @@
 			(uuid "cc939982-2140-4496-b288-2933af829cf5")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R53")
 					(unit 1)
@@ -29237,7 +29237,7 @@
 			(uuid "0cbf9cf9-fd73-43c4-8109-11d3f86d7a61")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R5")
 					(unit 1)
@@ -29307,7 +29307,7 @@
 			(uuid "d6753620-2cb4-4a93-ab2e-af5144475983")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C37")
 					(unit 1)
@@ -29375,7 +29375,7 @@
 			(uuid "5a17f349-f137-4284-860a-b6ac64a2c727")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "J1")
 					(unit 1)
@@ -29441,7 +29441,7 @@
 			(uuid "bb961306-1e79-4660-a659-a4cba39b6323")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR034")
 					(unit 1)
@@ -29507,7 +29507,7 @@
 			(uuid "eaec95d0-7510-473a-9f16-5451b3bd0bd9")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR055")
 					(unit 1)
@@ -29577,7 +29577,7 @@
 			(uuid "47e7786e-e0a7-48da-8ce6-8ece4fa65bac")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R49")
 					(unit 1)
@@ -29586,7 +29586,7 @@
 		)
 	)
 	(symbol
-		(lib_id "my-NMOS:IRFP260NPBF")
+		(lib_id "myNMOS:IRFP260NPBF")
 		(at 248.92 193.04 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -29676,7 +29676,7 @@
 			(uuid "bafb9159-1886-4e57-95cf-5a2865a67036")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "U13")
 					(unit 1)
@@ -29746,7 +29746,7 @@
 			(uuid "f8e384c0-bf5c-4769-bd96-6b56dc97a58a")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C22")
 					(unit 1)
@@ -29816,7 +29816,7 @@
 			(uuid "b6d8821b-ef00-4101-8960-558bff305339")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C32")
 					(unit 1)
@@ -29881,7 +29881,7 @@
 			(uuid "8031751f-3da2-4ece-8aaa-b8b258e9ebc0")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR029")
 					(unit 1)
@@ -29967,7 +29967,7 @@
 			(uuid "b673b361-59a5-423a-99c4-3a89b79e4811")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "U3")
 					(unit 1)
@@ -30035,7 +30035,7 @@
 			(uuid "46416a2b-8e55-495a-8eb1-a1ab33d970f4")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C12")
 					(unit 1)
@@ -30103,7 +30103,7 @@
 			(uuid "f9739f8d-5a9c-4074-90a7-866fae159f48")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R15")
 					(unit 1)
@@ -30188,7 +30188,7 @@
 			(uuid "99a268de-1ce7-4913-870c-e6fb5a2b12f8")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "U3")
 					(unit 3)
@@ -30256,7 +30256,7 @@
 			(uuid "c405f769-4cf6-4df1-a965-1a60fb0042c8")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "L1")
 					(unit 1)
@@ -30326,7 +30326,7 @@
 			(uuid "3a658e7f-e5a4-4d65-9ced-1dc907754824")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R23")
 					(unit 1)
@@ -30395,7 +30395,7 @@
 			(uuid "ad2c51a8-8e0a-491a-951b-1e7dfc6e9b35")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C35")
 					(unit 1)
@@ -30464,7 +30464,7 @@
 			(uuid "4243b1d8-0ce4-4691-b230-1d36cc5d33ef")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "J7")
 					(unit 1)
@@ -30530,7 +30530,7 @@
 			(uuid "41f1adf4-6f00-47fd-964b-50f1c558294e")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR032")
 					(unit 1)
@@ -30616,7 +30616,7 @@
 			(uuid "f7263217-5a3f-4f56-92b5-ffdd8a7c2c4b")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "U3")
 					(unit 2)
@@ -30684,7 +30684,7 @@
 			(uuid "a37edb55-3c52-4b53-892c-b8d5aeaab1c9")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C36")
 					(unit 1)
@@ -30750,7 +30750,7 @@
 			(uuid "95c07ab8-0c31-47e3-a145-05606d541365")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR04")
 					(unit 1)
@@ -30884,7 +30884,7 @@
 			(uuid "a8891be1-4a5f-4682-90af-68b2032e29a9")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R25")
 					(unit 1)
@@ -30950,7 +30950,7 @@
 			(uuid "a4190f5f-2677-4a32-ab71-98d4cc7f08b7")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR063")
 					(unit 1)
@@ -31017,7 +31017,7 @@
 			(uuid "a1614deb-eb2c-4e38-92ac-2339bed1b0de")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "R43")
 					(unit 1)
@@ -31096,7 +31096,7 @@
 			(uuid "112c82c7-2459-4412-925f-e8413195789a")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "U5")
 					(unit 1)
@@ -31162,7 +31162,7 @@
 			(uuid "ecc9313a-cc26-44ad-a24c-8367fc8d9587")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR09")
 					(unit 1)
@@ -31335,7 +31335,7 @@
 			(uuid "fc3fe2c2-2e2e-4432-a322-3b9677fc5d3a")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "U2")
 					(unit 2)
@@ -31402,7 +31402,7 @@
 			(uuid "abbdffef-f0d5-488b-91ed-e6f475af4137")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "C25")
 					(unit 1)
@@ -31468,7 +31468,7 @@
 			(uuid "31e47b25-d732-413e-b495-fffe0402b25e")
 		)
 		(instances
-			(project "Electronic Load"
+			(project "ELV1"
 				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
 					(reference "#PWR060")
 					(unit 1)

@@ -11,7 +11,9 @@ Proje detayları ve görseller: https://omerikinci.com/projects/electronic-dummy
 | --- | --- |
 | `firmware/` | STM32G030F6 için STM32CubeIDE projesi (`ilkdeneme`). Final kod: `firmware/Core/Src/main.c` |
 | `firmware-history/2026-04-27-stable/` | 27.04.2026 tarihli önceki stabil `main.c` |
-| `hardware/` | KiCad şema ve PCB (`Electronic Load`), PCB görselleri, özel sembol kütüphanesi |
+| `hardware/ELV1/` | KiCad şema ve PCB (`ELV1`, eski adıyla `Electronic Load`), PCB görselleri, projeye özel sembol kütüphanesi |
+| `hardware/ELV1-revision/` | ELV1'in revizyon kartı: KiCad şema ve PCB (`ELV1-revision`), PCB görselleri |
+| `hardware/libraries/` | Projelerde kullanılan özel KiCad sembol (`symbols/`) ve footprint (`footprints/`) kütüphaneleri |
 | `arduino-prototype/` | STM32'ye geçmeden önceki Arduino tabanlı ilk prototip (`koryukprojesi.ino`) |
 
 ## Firmware

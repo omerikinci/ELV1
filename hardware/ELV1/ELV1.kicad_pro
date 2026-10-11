@@ -536,11 +536,11 @@
   "libraries": {
     "pinned_footprint_libs": [],
     "pinned_symbol_libs": [
-      "my-NMOS"
+      "myNMOS"
     ]
   },
   "meta": {
-    "filename": "Electronic Load.kicad_pro",
+    "filename": "ELV1.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -592,7 +592,7 @@
       "method": 0,
       "sort_order": 0
     },
-    "bom_export_filename": "..\\..\\..\\..\\Desktop\\Electronic Load.csv",
+    "bom_export_filename": "..\\..\\..\\..\\Desktop\\ELV1.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -737,8 +737,8 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "Electronic Load.kicad_sch",
-        "name": "Electronic Load",
+        "filename": "ELV1.kicad_sch",
+        "name": "ELV1",
         "uuid": "00000000-0000-0000-0000-000000000000"
       }
     ],

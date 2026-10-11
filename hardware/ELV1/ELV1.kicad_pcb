@@ -218,7 +218,7 @@
 		(property ki_fp_filters "*Buzzer*")
 		(path "/bd9cc2c0-b700-48a9-9646-e3ff3e18da2d")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr through_hole)
 		(fp_circle
 			(center 3.8 0)
@@ -387,7 +387,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/53fe1ac8-cb9e-4b4d-a1b4-3aa8936f230d")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 -0.735)
@@ -586,7 +586,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/d7f11e2c-0e3b-4722-a0d0-b3d83af9c465")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -785,7 +785,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/0f17636c-9ea6-4b8b-9222-1998965c6931")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 0.735)
@@ -984,7 +984,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/6c1d8a98-bd4d-426b-bb41-ee28fec568aa")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -1183,7 +1183,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/64276e9e-a77e-4036-bc5c-0362e9a77cf6")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -1382,7 +1382,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/b1c0257b-f350-43a8-94cf-48a0316bb353")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -1581,7 +1581,7 @@
 		(property ki_fp_filters "SOT?23*")
 		(path "/56de237d-828b-48b4-8b34-ef06e5214d1c")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start 0.91 1.56)
@@ -1926,7 +1926,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/1b26e199-805c-46d6-a00c-61603673a895")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -2125,7 +2125,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/554512aa-43aa-430f-a1c1-ef02d28bf872")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -2325,7 +2325,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/a1a457be-b814-4252-8105-8d9fe668eff1")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -2524,7 +2524,7 @@
 		(property ki_fp_filters "SOT?23*")
 		(path "/76e02aac-f8a4-4f14-9f4e-00e568a1e389")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.76 -1.56)
@@ -2849,7 +2849,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/fe3f386a-6505-4eb4-bbaf-0a25cd962863")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 -0.735)
@@ -3061,7 +3061,7 @@
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/b2bfa89f-37da-42ed-96fe-0625c41ce9ed")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -1.86 -0.96)
@@ -3282,7 +3282,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/1fbfe5cb-7a4d-4154-bcf4-60264b62b684")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 0.735)
@@ -3481,7 +3481,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/a3919298-133f-42eb-8d40-3d945e0a9162")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -3680,7 +3680,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/e9097510-ba2f-4c55-9888-9a360c905c54")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 0.735)
@@ -3879,7 +3879,7 @@
 		(property ki_fp_filters "TerminalBlock*:*")
 		(path "/bc9bc944-d7e7-49e6-b49b-d298e479b474")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -1.6 -2.75)
@@ -4323,7 +4323,7 @@
 		(property ki_fp_filters "D*DO?201AD*")
 		(path "/3627fc2c-9cea-4b4d-b562-28611453f786")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 2.36 0)
@@ -4504,7 +4504,7 @@
 		(property ki_fp_filters "Crystal*")
 		(path "/263c58eb-a738-42cd-8633-69994bbe6095")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -3 1.86)
@@ -4705,7 +4705,7 @@
 		(property ki_fp_filters "Diode*Bridge*Vishay*KBU*")
 		(path "/ce454e49-beed-48b7-a4d4-debd53bbc418")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 19.3 5.3)
@@ -5008,7 +5008,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/208a5142-fa06-4929-8853-c4b246bdea5c")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 -0.735)
@@ -5207,7 +5207,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/053dd413-7b27-4d3a-8db8-ffdd5b65ce83")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -5406,7 +5406,7 @@
 		(property ki_fp_filters "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*")
 		(path "/f1a28f5b-6934-4241-8407-681acb48c1af")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start 2.06 2.56)
@@ -5770,7 +5770,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/e2ac336e-2be9-4e9d-9f0a-1a107eb11bb9")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 -0.735)
@@ -5970,7 +5970,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/2445f30f-3bca-40f7-99d7-382d082b542f")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 -0.5225)
@@ -6169,7 +6169,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/c1f2c0a1-4a7d-4443-a132-5d619a0dcee6")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 0.735)
@@ -6368,7 +6368,7 @@
 		(property ki_fp_filters "SMDIP*W9.53mm*")
 		(path "/67ed07dd-5df2-4cd6-b536-fdf34b69e95d")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start 3.235 2.6)
@@ -6608,7 +6608,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/241bf538-ea54-437c-865b-263b102e6285")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 0.735)
@@ -6807,7 +6807,7 @@
 		(property ki_fp_filters "SOT?23?5*")
 		(path "/5f392f2a-681b-43e2-b4c3-2659720e39af")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.91 1.56)
@@ -7146,7 +7146,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/223ff289-0e21-4d4a-a3bd-4601cd279001")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -7345,7 +7345,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/f38b7486-8302-4754-8158-5c168af7dc50")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 -0.735)
@@ -7545,7 +7545,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/5ffdca08-f1a8-4be7-8aad-c8b044dbe8a1")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.237258 -0.5225)
@@ -7744,7 +7744,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/947f8394-5751-4e5a-9927-8dc7fc636243")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 0.735)
@@ -7943,7 +7943,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/34f5ec15-0134-4678-8ecc-12b72e9419a0")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 0.735)
@@ -8142,7 +8142,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/01cf412d-92e8-4c15-91c9-f0a2675b3fe5")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -8341,7 +8341,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/de25eed9-b574-42ca-a977-aba62726664c")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -3.65 10.11)
@@ -8735,7 +8735,7 @@
 		(property ki_fp_filters "Connector*:*_2x??_*")
 		(path "/243e2c7e-3e2a-46fc-ba92-a06e014e0ab7")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 16.11 4.51)
@@ -9323,7 +9323,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/5c63e442-5637-46f0-b77a-09e4121a6818")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 0.735)
@@ -9522,7 +9522,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/f948cb5c-6b58-4e69-b280-c39c0549cdbc")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -9721,7 +9721,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/4bd88e1c-2f75-401e-b52f-bd1911fdb037")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -9922,7 +9922,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/f14099b8-c20d-4846-af57-a82d6991f4df")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -4.25 -1.6)
@@ -10209,7 +10209,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/073af81c-c739-49f0-b263-e1176dd0c904")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -4.25 -1.6)
@@ -10493,7 +10493,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/20c3c272-8c55-4804-ace2-8bf0b4a5f773")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -10718,7 +10718,7 @@
 		(property ki_fp_filters "D*DO?41*")
 		(path "/c10a0863-b360-4452-b8c6-9898b7da60c7")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 6.53 -1.47)
@@ -11006,7 +11006,7 @@
 		(property ki_fp_filters "CP_*")
 		(path "/c33f36eb-930e-4240-b7b9-2be4fb10a0b8")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 1.49 1.04)
@@ -12521,7 +12521,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/35906db6-b649-411a-bbb5-ba0fb800f99d")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -12721,7 +12721,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/b89916de-5a47-4417-a99c-1bec747b72fe")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -12920,7 +12920,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/5b20f5c4-c691-4108-842a-439cbdcc7b61")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -13119,7 +13119,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/ea236758-ac20-410b-9a99-e841c6f0edc3")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -13318,7 +13318,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/a9c349de-619c-41d5-b7d5-b12bedbafbb2")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 -0.735)
@@ -13517,7 +13517,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/7e6c25fa-9d1a-4373-b3bf-d65d6a7f6848")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 0.735)
@@ -13717,7 +13717,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/09c4a8cf-182b-406e-b060-1dc709154b67")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 0.735)
@@ -13916,7 +13916,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/4594f48b-6469-4ba2-86c3-bde57f665a89")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -14115,7 +14115,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/9b9750c3-ac25-42fc-9d01-88a1e2da6d34")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -14314,7 +14314,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/db28eb50-83e8-440e-8993-b99e2988bd48")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 0.735)
@@ -14513,7 +14513,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/669cfd81-48aa-4c05-abbf-f871fa2d4fa0")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 -0.735)
@@ -14712,7 +14712,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/ae248b55-8c26-4f5c-9e4a-843e6cadfcec")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 0.735)
@@ -14911,7 +14911,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/af352c01-5b2b-439c-a000-36e9c1c9c882")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 0.735)
@@ -15111,7 +15111,7 @@
 		(property ki_fp_filters "Inductor_* L_* *Ferrite*")
 		(path "/4e6f5d8c-603b-4f76-8595-0b8cd3f3036b")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.171267 -0.51)
@@ -15310,7 +15310,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/5890c543-473d-4ca3-bbb7-35683abac574")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 1.11 1)
@@ -15596,7 +15596,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/a5423736-6860-46da-9d22-2d12b2adb6ed")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 0.735)
@@ -15797,7 +15797,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/949daf30-fb12-433c-824c-dd62b33319e4")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -4.25 -1.6)
@@ -16081,7 +16081,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/3ebba098-ea2e-409b-ac95-e918a3c43087")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -16281,7 +16281,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/b1acc4f4-7bea-4683-8d19-8f522199c626")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 0.735)
@@ -16480,7 +16480,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/db9c7315-6337-48ed-97aa-88cf4d128d76")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 -0.735)
@@ -16681,7 +16681,7 @@
 		(property ki_fp_filters "Choke_* *Coil* Inductor_* L_*")
 		(path "/ec6df2b1-8a6f-43d1-afc5-c00c23c07223")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -6.3 -6.3)
@@ -17504,7 +17504,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/56f1083a-957e-4ae5-8122-74eedc6359fd")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 -0.735)
@@ -17743,7 +17743,7 @@
 		)
 		(path "/5901d541-45ae-4905-b65a-aef6914d2987")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start 3.21 3.21)
@@ -18035,7 +18035,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/564edbd8-7da2-4c54-89a5-299886be8ddb")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.727064 0.91)
@@ -18234,7 +18234,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/6e225047-9d67-486e-8d07-fc6988d90ab7")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 0.735)
@@ -18446,7 +18446,7 @@
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/c79a0b3e-802d-4649-ab8f-53d519d526d8")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -1.86 -0.96)
@@ -18668,7 +18668,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/0f7da08d-c6ff-425b-8ead-f8fb252ef3bc")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 0.735)
@@ -18869,7 +18869,7 @@
 		(property ki_fp_filters "TO-???* *_Diode_* *SingleDiode* D_*")
 		(path "/1ac72134-677e-4a85-9e18-454e554f54d1")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -3.51 1.65)
@@ -19142,7 +19142,7 @@
 		(property ki_fp_filters "*Fuse*")
 		(path "/5a0c36d2-b336-4f63-85d3-30c68294d1f0")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -1.83 -2.12)
@@ -19365,7 +19365,7 @@
 		(property ki_fp_filters "Choke_* *Coil* Inductor_* L_*")
 		(path "/950429ab-4f02-4296-a93e-8d82d41d1e6c")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -3.7 -3.7)
@@ -19646,7 +19646,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/507326b3-4be7-4bf4-b011-424d4a53ee34")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -19845,7 +19845,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/b1308865-c0e9-475a-afbc-6f6697a71aa5")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 0.735)
@@ -20045,7 +20045,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/d713bb9d-8fd8-4239-aead-9ba96e4ef2ed")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 0.735)
@@ -20244,7 +20244,7 @@
 		(property ki_fp_filters "CP_*")
 		(path "/21a14a70-a8a6-4975-93d8-4a51e5014915")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 16.12 0.04)
@@ -24319,7 +24319,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/51964ad4-1da8-48b1-bed6-7a4fe41f1031")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 0.735)
@@ -24518,7 +24518,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/cb0e1faa-f195-43e9-9225-2ba8acd8f5fe")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -24717,7 +24717,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/edbc3aa5-0633-45da-a70d-a146416fe8e2")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 0.735)
@@ -24916,7 +24916,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/61930405-af40-440b-9afb-c0b842e5aa76")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 0.735)
@@ -25115,7 +25115,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/7b076058-6a11-43ed-92a1-3b7e213793be")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 -0.735)
@@ -25314,7 +25314,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/180c6a11-2eb6-4144-bb9f-166a750d917d")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -25513,7 +25513,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/2785e856-fec9-4845-a2d5-6184b7caad23")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -25725,7 +25725,7 @@
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/080e98c5-ed41-4bd9-9887-5a448fa4c4dc")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -1.86 -0.96)
@@ -25946,7 +25946,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/db3a265f-582c-4620-8bc2-7ea5cfec47cf")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 0.735)
@@ -26145,7 +26145,7 @@
 		(property ki_fp_filters "TSSOP*4.4x6.5mm*P0.65mm*")
 		(path "/874ecf30-d96a-4d06-8646-d31b43fde34e")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -2.31 -3.385)
@@ -26590,7 +26590,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/beee3906-6235-4caf-970c-4102fafceb59")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 0.735)
@@ -26789,7 +26789,7 @@
 		(property ki_fp_filters "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*")
 		(path "/b16495b2-a41f-43f7-a1ad-6b14de2fb59f")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start 2.06 2.56)
@@ -27152,7 +27152,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/59e42de6-5491-4c73-a0a6-f7ea4aab6179")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -27351,7 +27351,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/bd69eb5d-d717-4ed8-bf75-e6d0f10735fd")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 -0.735)
@@ -27550,7 +27550,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/8c6c986a-92a9-4260-af3b-87dd0104839c")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 0.735)
@@ -27749,7 +27749,7 @@
 		(property ki_fp_filters "TO?263*")
 		(path "/fa8eb0a9-751a-4277-adc1-f52e1b0304ae")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -3.46 -5.2)
@@ -28174,7 +28174,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/4f83bea8-f688-45f9-ad87-2af0f45e4549")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 0.735)
@@ -28373,7 +28373,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/701165da-be6e-4228-889d-33061c069417")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 0.735)
@@ -28573,7 +28573,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/5bf2daa0-250e-4b08-affc-e92a070f20f3")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 0.735)
@@ -28772,7 +28772,7 @@
 		(property ki_fp_filters "Connector*:*_2x??_*")
 		(path "/56a767ff-620d-4a84-9f67-cf7f5ebd1b8c")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -2.91 -0.3)
@@ -29360,7 +29360,7 @@
 		(property ki_fp_filters "CP_*")
 		(path "/be8035e0-e285-4a01-af4f-00587a8c6f1e")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 8.86 -0.317)
@@ -31855,7 +31855,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/d4ac0e26-785e-4a30-85f0-43353acb25d5")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -32054,7 +32054,7 @@
 		(property ki_fp_filters "SOT?23?5*")
 		(path "/0175db21-1ec7-4198-a7b2-082f616ae4eb")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.91 -1.56)
@@ -32399,7 +32399,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/6c8cda43-4a3d-4529-b465-7113569fb40b")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -32598,7 +32598,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/81b2df96-4ad9-41e9-b763-82680a87bdb7")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 0.735)
@@ -32797,7 +32797,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/bd408a42-9594-44b4-a349-ffbd9f7df594")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -32996,7 +32996,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/80edfdd8-a4c6-4ce5-a2ac-d570977969f1")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 0.735)
@@ -33195,7 +33195,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/2324bdda-fce2-4c98-b4d8-4e631e21f27d")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 -0.735)
@@ -33394,7 +33394,7 @@
 		(property ki_fp_filters "SOT?23*")
 		(path "/10cd78d3-792b-49bc-948b-1af520de8b82")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.76 -1.56)
@@ -33719,7 +33719,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/8833e5fc-9c77-4066-889d-11c50cc26a53")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 0.735)
@@ -33923,7 +33923,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/d70aca31-5287-4b5e-a7e2-7f3cc1c80ff9")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 0.735)
@@ -34128,7 +34128,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/f667d7e0-ec93-4d85-bc39-c45a061f7f9d")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 0.735)
@@ -34332,7 +34332,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/87a42197-605d-469b-b5d3-52398d3fb9b2")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -34536,7 +34536,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/0277586d-2887-4a79-9757-19a935825153")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 0.735)
@@ -34740,7 +34740,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/cb71bf2a-7cfc-4e8d-b11c-dbb86c752f50")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 -0.735)
@@ -34944,7 +34944,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/62b939f0-e630-481d-b8f1-96d29573c2c5")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 0.735)
@@ -35148,7 +35148,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/234fa2ed-8906-44d1-8c54-299196c9584e")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -35718,7 +35718,7 @@
 		(property ki_fp_filters "TO?220*")
 		(path "/af4105c6-01b7-4779-821c-80c29ca6bb4c")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 7.78 3.12)
@@ -36290,7 +36290,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/2e75387f-a36e-48cc-873e-083cc06e29e4")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 0.735)
@@ -36494,7 +36494,7 @@
 		(property ki_fp_filters "Inductor_* L_* *Ferrite*")
 		(path "/7dba805f-5a0d-4c2e-b4a1-4b04cb5f0f10")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.171267 -0.51)
@@ -36698,7 +36698,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/d297a451-45a1-47b4-ad4b-6a0fa64e969e")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -36902,7 +36902,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/1ab33f5b-d42e-4eef-b45e-3f9bfd2595b2")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 -0.735)
@@ -37106,7 +37106,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/0d26bfac-fc39-4592-9034-744099cf1a0c")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 0.735)
@@ -37310,7 +37310,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/44991039-4abd-4435-b4ab-6ebb13a6c0ca")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 0.735)
@@ -37514,7 +37514,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/e0ad5a04-0a1e-4486-b678-6317571ef1e8")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 0.735)
@@ -37718,7 +37718,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/bdc784ac-5137-4584-833b-5bbaaf703085")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -37923,7 +37923,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/2f0e29b1-3d56-4409-9de2-0ea77e694fbe")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 0.735)
@@ -38127,7 +38127,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/e1426a45-19e6-47cf-b6b2-8b9c02649f9f")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 0.735)
@@ -38272,7 +38272,7 @@
 			)
 		)
 	)
-	(footprint "myNTC:Untitled"
+	(footprint "myNTC:NTC"
 		(layer "B.Cu")
 		(uuid "b505047a-c677-4653-a52a-aa28f5b0dc93")
 		(at 115.715 69.365 180)
@@ -38375,7 +38375,7 @@
 		(property ki_fp_filters "1")
 		(path "/6d9d0044-3a22-4778-87cf-fcb231acd0b7")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start 4.01 -4.95)
@@ -38616,7 +38616,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/a87231ef-8de7-4bf4-8191-4099e569d541")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -38821,7 +38821,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/a624c46c-7390-451c-9bef-a69db8e0c6c5")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 0.735)
@@ -39025,7 +39025,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/308782cb-c173-43ae-a60f-f946e213ae9f")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 0.735)
@@ -39229,7 +39229,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/5898a54c-359a-404a-b068-a410567470c0")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 0.735)
@@ -39434,7 +39434,7 @@
 		)
 		(path "/b2c773e3-09db-4e8c-b2a0-3b65242095a9")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -5.61 3.25)
@@ -39750,7 +39750,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/9ba600f3-040c-49b9-ac78-12815e299ecd")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -39956,7 +39956,7 @@
 		(property ki_fp_filters "TO?220*")
 		(path "/92ac447c-fc42-4689-8b9d-59ba1eb526dd")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -5.21 12.01)
@@ -40922,7 +40922,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/a17070e8-8c72-4034-a648-3d294b375d44")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 -0.735)
@@ -41128,7 +41128,7 @@
 		(property ki_fp_filters "TSSOP*3x3mm*P0.5mm*")
 		(path "/8e8135da-0011-4a5b-932d-fdd9fecd4668")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start 1.625 1.625)
@@ -41466,7 +41466,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/528a0177-62d7-49b1-b7b1-740134193a17")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -41670,7 +41670,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/02fed423-f25d-4abe-bec7-e0e230885d39")
 		(sheetname "/")
-		(sheetfile "Electronic Load.kicad_sch")
+		(sheetfile "ELV1.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 -0.735)
