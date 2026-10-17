@@ -35,9 +35,7 @@ static void MX_ADC1_Init(void);
 static void MX_I2C2_Init(void);
 /* USER CODE BEGIN PFP */
 static uint8_t adc_read_channel(uint32_t channel, uint16_t *raw_value);
-static uint8_t adc_read_channel_smp(uint32_t channel, uint32_t sampling_time, uint16_t *raw_value);
-static uint8_t adc_read_channel_avg(uint32_t channel, uint32_t sampling_time, uint8_t samples, uint16_t *raw_avg);
-static uint8_t adc_update_vdda(void);
+static uint8_t adc_read_channel_avg(uint32_t channel, uint8_t samples, uint16_t *raw_avg);
 static uint32_t adc_raw_to_millivolt(uint16_t raw);
 static uint32_t lv_adc_to_input_millivolt(uint16_t raw);
 static uint32_t mv_to_tenths_rounded(uint32_t mv);
@@ -73,16 +71,8 @@ static void buzzer_pattern_system_off(void);
 #define LCD_DATA_MODE     LCD_RS_BIT
 #define LCD_I2C_TIMEOUT   5U
 #define LCD_DEFAULT_ADDR  (0x27U << 1)
-#define ADC_VREF_MV       3300UL   /* VREFINT okunamazsa kullanılan varsayılan VDDA */
+#define ADC_VREF_MV       3300UL
 #define ADC_MAX           4095UL
-#define VDDA_MIN_MV       2900UL   /* VREFINT ile hesaplanan VDDA için makul aralık */
-#define VDDA_MAX_MV       3600UL
-#define VREFINT_SAMPLES   8U
-/* Gerilim bölücüler (~31 kOhm kaynak) ve VREFINT (min 4 us) için uzun örnekleme:
-   160.5 cycle @ 32 MHz ADC saati = 5 us (datasheet Tablo 59: 12 bit, 50 kOhm'a kadar) */
-#define ADC_SMP_SLOW      ADC_SAMPLINGTIME_COMMON_2
-
-static uint32_t adc_vdda_mv = ADC_VREF_MV;   /* adc_update_vdda() ile güncellenir */
 #define LV_DIV_TOP_OHM    47000UL
 #define LV_DIV_BOT_OHM    3300UL
 #define LV_OFFSET_MV      1500UL
@@ -699,16 +689,11 @@ static void buzzer_pattern_system_off(void)
 
 static uint8_t adc_read_channel(uint32_t channel, uint16_t *raw_value)
 {
-  return adc_read_channel_smp(channel, ADC_SAMPLINGTIME_COMMON_1, raw_value);
-}
-
-static uint8_t adc_read_channel_smp(uint32_t channel, uint32_t sampling_time, uint16_t *raw_value)
-{
   ADC_ChannelConfTypeDef sConfig = {0};
 
   sConfig.Channel = channel;
   sConfig.Rank = ADC_REGULAR_RANK_1;
-  sConfig.SamplingTime = sampling_time;
+  sConfig.SamplingTime = ADC_SAMPLINGTIME_COMMON_1;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
     return 0U;
@@ -743,7 +728,7 @@ static uint8_t adc_read_channel_smp(uint32_t channel, uint32_t sampling_time, ui
   return 1U;
 }
 
-static uint8_t adc_read_channel_avg(uint32_t channel, uint32_t sampling_time, uint8_t samples, uint16_t *raw_avg)
+static uint8_t adc_read_channel_avg(uint32_t channel, uint8_t samples, uint16_t *raw_avg)
 {
   uint8_t i;
   uint16_t raw = 0U;
@@ -756,7 +741,7 @@ static uint8_t adc_read_channel_avg(uint32_t channel, uint32_t sampling_time, ui
 
   for (i = 0U; i < samples; i++)
   {
-    if (adc_read_channel_smp(channel, sampling_time, &raw) == 0U)
+    if (adc_read_channel(channel, &raw) == 0U)
     {
       return 0U;
     }
@@ -767,41 +752,15 @@ static uint8_t adc_read_channel_avg(uint32_t channel, uint32_t sampling_time, ui
   return 1U;
 }
 
-/* Gerçek VDDA'yı dahili referans (VREFINT) ve fabrika kalibrasyon değeriyle ölçer.
-   Sonuç makul aralık dışındaysa önceki değer korunur. */
-static uint8_t adc_update_vdda(void)
-{
-  uint16_t raw_vrefint = 0U;
-  uint32_t vdda;
-
-  if (adc_read_channel_avg(ADC_CHANNEL_VREFINT, ADC_SMP_SLOW, VREFINT_SAMPLES, &raw_vrefint) == 0U)
-  {
-    return 0U;
-  }
-  if (raw_vrefint == 0U)
-  {
-    return 0U;
-  }
-
-  vdda = __HAL_ADC_CALC_VREFANALOG_VOLTAGE(raw_vrefint, ADC_RESOLUTION_12B);
-  if ((vdda < VDDA_MIN_MV) || (vdda > VDDA_MAX_MV))
-  {
-    return 0U;
-  }
-
-  adc_vdda_mv = vdda;
-  return 1U;
-}
-
 static uint32_t adc_raw_to_millivolt(uint16_t raw)
 {
-  return (((uint32_t)raw * adc_vdda_mv) + (ADC_MAX / 2UL)) / ADC_MAX;
+  return (((uint32_t)raw * ADC_VREF_MV) + (ADC_MAX / 2UL)) / ADC_MAX;
 }
 
 /* Ham ADC değerinden doğrudan giriş gerilimine; ara adımda yuvarlama kaybı olmasın diye 64 bit. */
 static uint32_t lv_adc_to_input_millivolt(uint16_t raw)
 {
-  uint64_t num = (uint64_t)raw * adc_vdda_mv * (LV_DIV_TOP_OHM + LV_DIV_BOT_OHM);
+  uint64_t num = (uint64_t)raw * ADC_VREF_MV * (LV_DIV_TOP_OHM + LV_DIV_BOT_OHM);
   uint64_t den = (uint64_t)ADC_MAX * LV_DIV_BOT_OHM;
   return (uint32_t)((num + (den / 2ULL)) / den);
 }
@@ -949,14 +908,6 @@ int main(void)
   MX_ADC1_Init();
   MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
-  /* Gerilim bölücüler ve VREFINT için ikinci ortak örnekleme süresi: 160.5 cycle.
-     ADC henüz etkin değilken (ADEN = 0) ayarlanır. */
-  LL_ADC_SetSamplingTimeCommonChannels(hadc1.Instance, LL_ADC_SAMPLINGTIME_COMMON_2,
-                                       LL_ADC_SAMPLINGTIME_160CYCLES_5);
-  /* ADC kalibrasyonu: datasheet doğruluk değerleri kalibrasyon sonrası için geçerli
-     ve her açılışta yapılması öneriliyor. ADC devre dışıyken çağrılmalı. */
-  (void)HAL_ADCEx_Calibration_Start(&hadc1);
-  (void)adc_update_vdda();
   lcd_addr = lcd_detect_address();
   lcd_init();
   lcd_cmd(0x01U);
@@ -1089,10 +1040,9 @@ int main(void)
       ds_state = 0U;
     }
 
-    (void)adc_update_vdda();
     if ((adc_read_channel(ADC_CHANNEL_0, &raw_rev) == 0U) ||
-        (adc_read_channel_avg(ADC_CHANNEL_1, ADC_SMP_SLOW, 4U, &raw_lv) == 0U) ||
-        (adc_read_channel_avg(ADC_CHANNEL_11, ADC_SMP_SLOW, 4U, &raw_unprot) == 0U) ||
+        (adc_read_channel_avg(ADC_CHANNEL_1, 4U, &raw_lv) == 0U) ||
+        (adc_read_channel_avg(ADC_CHANNEL_11, 4U, &raw_unprot) == 0U) ||
         (adc_read_channel(ADC_CHANNEL_2, &raw_pot) == 0U) ||
         (adc_read_channel(ADC_CHANNEL_3, &raw_set_v) == 0U) ||
         (adc_read_channel(ADC_CHANNEL_4, &raw_set_a) == 0U))
