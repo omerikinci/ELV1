@@ -217,6 +217,7 @@
         0.4,
         0.5,
         0.6,
+        0.7,
         0.8,
         1.0,
         1.1,
@@ -261,7 +262,7 @@
         },
         {
           "diameter": 0.3,
-          "drill": 0.3
+          "drill": 0.2
         },
         {
           "diameter": 0.6,
@@ -540,7 +541,7 @@
     ]
   },
   "meta": {
-    "filename": "ELV1-revision.kicad_pro",
+    "filename": "ELV1 revision.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -592,7 +593,7 @@
       "method": 0,
       "sort_order": 0
     },
-    "bom_export_filename": "..\\..\\..\\..\\Desktop\\ELV1-revision.csv",
+    "bom_export_filename": "..\\..\\..\\..\\Desktop\\ELV1 revision.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -743,18 +744,18 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "ELV1-revision.kicad_sch",
-        "name": "ELV1-revision",
+        "filename": "ELV1 revision.kicad_sch",
+        "name": "ELV1 revision",
         "uuid": "a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
       }
     ],
-    "used_designators": "U16-17,C45-53,L3,#PWR81-96,R60-67,JP1",
+    "used_designators": "J5,#PWR113",
     "variants": []
   },
   "sheets": [
     [
       "a1d40612-f2bd-4e83-b9b3-fa72862cc7a8",
-      "ELV1-revision"
+      "ELV1 revision"
     ]
   ],
   "text_variables": {},
