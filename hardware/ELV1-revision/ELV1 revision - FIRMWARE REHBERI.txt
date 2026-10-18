@@ -837,8 +837,12 @@ ama ELV1 tamsayı kullanıyordu.
          PHDR-20VS housing:           15.073 stok, 0,28 €
          SPHD-001T-P0.5 terminal:     319.492 stok, 0,09 € (AWG 26-22)
      - PUDP-20V-S Mouser'da stok 0 (17.11.2026 bekleniyor).
-     - Footprint'i JST_PHD_B20B-PHDSS_2x10_P2.00mm_Vertical yapmak yalnızca
-       silkscreen ve 3D'yi düzeltir; padler değişmez.
+     - [x] J4 footprint'i JST_PHD_B20B-PHDSS_2x10_P2.00mm_Vertical yapıldı
+       (şematik + PCB, 18.10.2026).
+       - Padler, konum ve netler aynı kaldı; yalnızca silkscreen ve 3D değişti.
+       - DRC: şematik-footprint uyuşmazlığı kalktı.
+       - Yeni uyarı: J4 silkscreen'i C39 referansına değiyor (kozmetik).
+       - Kartta artık JST PHD set kullanılacak (yukarıdaki üçlü).
      - 3D baskı önerilmez: 2 mm aralıkta terminal kilit dilleri ~0.3 mm et
        kalınlığı ister. FDM'de olmaz, reçinede kırılgan olur.
 
