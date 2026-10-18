@@ -118,6 +118,13 @@ ama ELV1 tamsayı kullanıyordu.
      - USART1 (PB6/PB7),
      - TIM3_CH1/CH2 (PB4/PB5), TIM16_CH1 (PA6), TIM14_CH1 (PA7),
      - HSE (PF0/PF1), SWD.
+   TEDARİK (18.10.2026, Chrome ile bakıldı; KDV hariç):
+     - STM32G071CBT6, Farnell TR (tr.farnell.com, kod 2980900): 18.665 stok,
+       1+ 3,84 €, 10+ 2,46 €, 25+ 2,22 €, 100+ 2,00 €.
+     - STM32G071CBT6, Mouser TR (511-STM32G071CBT6): 582 stok (+3000 beklenen
+       22.02.2027), 1 adet 3,89 €, 10 adet 2,75 €, 100 adet 2,20 €.
+     - Octopart: element14 21.518; Arrow 3.736; G071C8T6 Arrow 3.967.
+     - Özdisan'da G071 ve yedeklerin hiçbiri stokta yoktu.
    UYMAYANLAR:
      - STM32C0 serisi: pin 4 VBAT değil PF3; SWD pinleri farklı.
      - STM32G030C: pin dizilimi uyar ama 8 KB RAM; G031 ile aynı kategori.
