@@ -695,6 +695,20 @@ ama ELV1 tamsayı kullanıyordu.
          * 0.1 µF için 2 x 1M (toplam 2 MΩ) da yeterli: 60 V'a ~0.34 s,
            kayıp ~26 mW.
          * KARAR (18.10.2026): L-N arası tek 1 MΩ, 1 W THT.
+     - ELV1'de GEÇİCİ çözüm uygulandı (kullanıcı, 18.10.2026):
+         * Yapılan: 12 x 10 MΩ (1/8-1/4 W) paralel, ölçülen ~790k, AC
+           girişe paralel. Kapat-fişi çek-dokun testinde çarpma olmadı.
+         * Dikkat: paralel bağlantıda her direnç tam şebeke tepe gerilimini
+           (325 V) görür. 1/4 W metal film tipik 250 V, 1/8 W 150-200 V
+           çalışma gerilimlidir; bu dirençler sınır üstünde çalışıyor.
+         * Kalıcı çözüm: stoktaki MF02WJJ0105A19 (1 MΩ 1 W, 500 V) ile
+           değiştir.
+         * Ara çözüm: aynı 12 direnci 2 seri x 6 paralel bağla.
+             - Toplam ~3.3 MΩ, direnç başına ~163 V tepe.
+             - 0.1 µF'ta 60 V'a ~0.56 s.
+             - 1/8 W dirençlerin gerilim değeri yine sınırda olabilir.
+         * Ölçerek test: fişi çektikten hemen sonra fiş pinleri arasında
+           multimetre DC V ile 60 V altını gör (elle dokunmadan).
              - 60 V'a ~0.17 s'de iner, kayıp ~53 mW.
              - Direncin "maks. çalışma gerilimi" en az 350 V, tercihen
                500 V olmalı (metal film / metal oksit; datasheet'ten bak).
@@ -820,7 +834,8 @@ ama ELV1 tamsayı kullanıyordu.
          (sadece 5V TPS54302 kalır).
  [x] J4.8 / J4.14 GND'ye geri bağlandı (H16).
  [ ] Şebeke girişine X kondansatörü boşaltma direnci eklenecek, PE bağlantısı
-     kontrol edilecek (H14). ELV1'de de yapılmalı.
+     kontrol edilecek (H14). ELV1'de geçici 12 x 10 MΩ paralel takıldı;
+     1 MΩ 1 W (500 V) ile değiştirilecek.
  [ ] J4 (20 pin, 2x10, 2.00 mm) konnektör tedariki (18.10.2026):
      - KLS L-KLS1-XL4-2.00-2X10-H housing (KLS çiziminde "PHB 2.0") Özdisan,
        Uraz ve KomponentStore'da stok 0.
@@ -837,12 +852,14 @@ ama ELV1 tamsayı kullanıyordu.
          PHDR-20VS housing:           15.073 stok, 0,28 €
          SPHD-001T-P0.5 terminal:     319.492 stok, 0,09 € (AWG 26-22)
      - PUDP-20V-S Mouser'da stok 0 (17.11.2026 bekleniyor).
-     - [x] J4 footprint'i JST_PHD_B20B-PHDSS_2x10_P2.00mm_Vertical yapıldı
-       (şematik + PCB, 18.10.2026).
-       - Padler, konum ve netler aynı kaldı; yalnızca silkscreen ve 3D değişti.
-       - DRC: şematik-footprint uyuşmazlığı kalktı.
-       - Yeni uyarı: J4 silkscreen'i C39 referansına değiyor (kozmetik).
-       - Kartta artık JST PHD set kullanılacak (yukarıdaki üçlü).
+     - KARAR (18.10.2026, kullanıcı): konnektör DEĞİŞMEZ.
+         * KLS PHB 2.0 kalır.
+         * J4'ü PHD'ye çeviren commit (97f4282) geri alındı; footprint yine
+           JST_PUD_B20B-PUDSS.
+         * Gereken: KLS başlığa uyan bir PHB 2.0 2x10 housing (KLS ya da
+           başka marka PHB 2.0 klonu) ve terminali.
+         * Klon alınacaksa ölçüleri KLS çizimiyle karşılaştır:
+           22.7 x 8.6 x 8.4 mm, kilit yanda.
      - 3D baskı önerilmez: 2 mm aralıkta terminal kilit dilleri ~0.3 mm et
        kalınlığı ister. FDM'de olmaz, reçinede kırılgan olur.
 

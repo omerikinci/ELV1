@@ -40408,7 +40408,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_PHD_B20B-PHDSS_2x10_P2.00mm_Vertical"
+		(property "Footprint" "Connector_JST:JST_PUD_B20B-PUDSS_2x10_P2.00mm_Vertical"
 			(at 295.91 185.42 0)
 			(hide yes)
 			(show_name no)
