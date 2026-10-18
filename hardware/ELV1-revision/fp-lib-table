@@ -1,6 +1,0 @@
-(fp_lib_table
-	(version 7)
-	(lib (name "myFuse")(type "KiCad")(uri "${KIPRJMOD}/../libraries/footprints/myFuse.pretty")(options "")(descr "ELV projeleri ozel footprint kutuphanesi"))
-	(lib (name "myNTC")(type "KiCad")(uri "${KIPRJMOD}/../libraries/footprints/myNTC.pretty")(options "")(descr "ELV projeleri ozel footprint kutuphanesi"))
-	(lib (name "myTO247")(type "KiCad")(uri "${KIPRJMOD}/../libraries/footprints/myTO247.pretty")(options "")(descr "ELV projeleri ozel footprint kutuphanesi"))
-)

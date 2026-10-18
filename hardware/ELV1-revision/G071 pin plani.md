@@ -41,7 +41,7 @@ EXTI hatları birbirinden farklı: 2, 4, 5, 7, 13, 14, 15. Çakışma yok.
 
 **TACT notu (16.10.2026):** TACT1/TACT2 önce PC13/PC14'teydi. Ancak EXTI13/14 encoder A/B (PB13/PB14) ile çakışıyordu ve bu pinlerde input capture yok. Bu yüzden PB4/PB5'e (TIM3_CH1/CH2) taşındı. C70/C71 etiket üzerinden bağlı; PCB'de PB4/PB5'e yakın yerleştir. ELV2'deki PB2 tach için uygun değil: timer'ı yok ve EXTI2, RCP (PA2) ile çakışıyor.
 
-**/OUT CONTROL notu:** Bu sinyal şu an şematikte yalnızca bir hierarchical label ve R40/R42'ye bağlı; işlemciye gitmiyor. Bu yüzden mevcut çizimde Q3 hep iletimde ve U10 hep kapalı (bkz. Bölüm 7). PB12, ELV2'de de giriş yolunu açıp kapatan pin. Ancak aktif seviyeler ters:
+**/OUT CONTROL notu (18.10.2026'da güncellendi):** Sinyal artık işlemciye bağlı. Netlist'te `/OUT CONTROL` = R40.1 + R42.2 + **U20.24 (PB12)**. Önceki "yalnızca hierarchical label, işlemciye gitmiyor, U10 hep kapalı" notu geçersiz (bkz. Bölüm 7, Bulgu 2). PB12, ELV2'de de giriş yolunu açıp kapatan pin. Ancak aktif seviyeler ters:
 - ELV1 revision: LOW = açık.
 - ELV2: HIGH = açık.
 
@@ -68,10 +68,10 @@ Bu yüzden firmware'de `LOAD_PATH_ON()` / `LOAD_PATH_OFF()` makroları kart baş
 
 ## 4. Boşta kalan pinler
 
-Yedek pinler (16.10.2026 itibarıyla 15 adet; PF0/PF1 HSE kristale bağlı):
+Yedek pinler (18.10.2026 itibarıyla 15 adet, ERC ile doğrulandı; PF0/PF1 HSE kristale bağlı):
 
 - PC13, PC14, PC15
-- PA0, PA1 (ADC, TIM2_CH1/CH2)
+- PA1 (ADC, TIM2_CH2) — **PA0 artık yedek değil: `/20V SENSE`'e bağlı (18.10.2026)**
 - PA4 (DAC1_OUT1), PA5 (DAC1_OUT2)
 - PA8 (UCPD1_CC1, dead-battery notu)
 - PB1, PB2, PB3
@@ -223,7 +223,7 @@ J6.1 (DUT −) = GND1 ── U10 IRFB4110 drain
    - Ters bağlanan bir batarya, U7/U8 body diyotları ve 0.1 Ω şöntler (R18/R19, 2512) üzerinden kısa devre olur. 3 V'luk bir hücrede bile (3 − 0.7) / 0.05 ≈ 46 A eder.
    - Ayrıca J5'in eksi ucu doğrudan board GND'ye, dolayısıyla USB üzerinden PC GND'sine bağlı.
    - → J5 ya U10'un arkasına (GND1 tarafına) ve F2'nin önüne alınmalı ya da kaldırılmalı.
-2. **/OUT CONTROL işlemciye bağlı değil.** Sinyal yalnızca hierarchical label + R40/R42'den oluşuyor. R42 pull-up nedeniyle Q3 hep açık, U10 hep kapalı. Bu çizimle üretilirse **tüm yük akımı U10'un body diyodundan geçer.** → G071'de PB12'ye bağla (Bölüm 1).
+2. **/OUT CONTROL işlemciye bağlı değil.** → **ÇÖZÜLDÜ (18.10.2026).** PB12'ye (U20.24) bağlandı, netlist ile doğrulandı. Reset anında R42 pull-up yolu kapalı tutuyor; firmware LOW vererek açar. "Tüm yük akımı body diyodundan geçer" riski kalktı. Firmware yük akımı vermeden önce U10'u açmak zorunda (bkz. yukarıdaki Düzeltme).
 3. **Ters algılama eşiği yaklaşık 5 V.**
    - Opto'nun sürmesi gereken akım: R38 üzerinden (15 − 2) V / 100 k ≈ 130 µA + R45 üzerinden ≈ 55 µA → ~190 µA.
    - LTV-817 CTR'si (5 mA'de min %50) düşük IF'de daha da düşer. Güvenli algılama için IF ≈ 0.6 mA gerekiyor: Vin ≈ 1.7 V + 0.6 mA × 5.6 k ≈ **5.2 V**.
@@ -404,7 +404,7 @@ Hata kaynakları:
 
 ### 10.3 ELV1 firmware incelemesi ve revizyon kararları (17.10.2026)
 
-Kaynak: `Documents/GitHub/ELV1/firmware/Core/Src/main.c` (son commit f1d0f2d; Desktop'taki "ELV1 CODE FİNAL.txt" ile aynı).
+Kaynak: `~/Documents/GitHub/ELV1-revision/firmware/Core/Src/main.c` (son commit f1d0f2d; Desktop'taki "ELV1 CODE FİNAL.txt" ile aynı).
 
 **ELV1 kodunda gerilim ölçümünü bozan noktalar:**
 
@@ -461,3 +461,45 @@ U9 bloğu kopyalandı; kopya U21 oldu (adres 0x49, ADDR → "ADS2 VDD").
 - **Bölücüler:** Altı direncin hepsi (R54/R55 dahil) "0.1 %" olarak işaretlendi. Footprint 0805.
 - **Ters bağlantıda:** AIN0/AIN3 ~−2 V'a iner; akım bölücüyle ~0.5 mA'e sınırlanır.
 - **Yedek:** Değişiklik öncesi şematik `ELV1 revision-backups/ELV1 revision_before_claude_ads2_2026-10-18.kicad_sch`.
+
+### 10.5 Şema doğrulaması — ikinci ADS1115 (18.10.2026)
+
+`kicad-cli sch export netlist` + `erc` ile kontrol edildi. **Bölüm 10.4'teki bağlantılar doğru:** AIN0−AIN1 gerçekten J6.2 ile GND1 arasında diferansiyel ölçüyor (her iki bölücünün alt ucu board GND'de), yani U10'un R_DS(on) ve body diyot düşümü ölçüme girmiyor. ADDR → /ADS2 VDD = **0x49**. Bölücü oranı 3.3/50.3 = 0.065606 → tam skala 31.2 V, 1 LSB ≈ 0.95 mV. Besleme `+3.3V → FB5 600R → C79 10 µF + C81 100 nF`.
+
+PA3 yolundaki eski sorun da çözülmüş: bölücü Thevenin'i artık 47k‖3.3k = **3.08 kΩ** (eskiden 31 kΩ), yani 12 bit / 79.5 cycle için izin verilen R_AIN sınırının içinde (bkz. 10.3, madde 5).
+
+**Dokümandan sapmalar — karar bekliyor:**
+
+| # | Durum | Etki |
+|---|---|---|
+| 1 | Filtre kondansatörleri **X7R**, doküman NPO/C0G diyordu. Değerler de farklı: C76/C80 = 220 nF (100 nF yerine), C74/C75/C77/C78 = 22 nF (10 nF yerine) | X7R'nin DC-bias katsayısı ve dielektrik absorpsiyonu 16 bit DC ölçümde yerleşme ve doğrusallık hatası yapar. En az C76/C80 C0G olmalı; 0805'te 220 nF C0G pratikte bulunmaz, o yüzden dokümanın kendi değerlerine (100 nF + 10 nF C0G) dönmek daha gerçekçi |
+| 2 | **MUX yerleşme süresi hesaba katılmamış.** Diferansiyel çevrim: 3.08k + R105 100R + C76 + R106 100R + 3.08k → R ≈ 6.37 kΩ, C = 220 nF, **τ ≈ 1.4 ms** | 16 bit için ~10τ ≈ 14 ms. 860 SPS'te kanal çiftini değiştirdikten sonra ilk ~12 çevrim atılmalı. C76/C80 = 100 nF yapmak bunu ~6 ms'ye indirir |
+| 3 | **BAT54S clamp eklenmemiş** (10.3 öneriyordu, netlist'te yok) | Ters bağlamada /LOAD VOLTAGE düğümü ≈ −2 V'a iner, R54 üzerinden ~0.6 mA akar. Bu akım yalnızca U21'e değil **PA3'e de** gidiyor. STM32G0 I_INJ limiti ±5 mA olduğu için anında hasar vermez ama kalıcı ters bağlantıda riskli. Clamp R105/R108'den **önce**, /LOAD VOLTAGE ve /VS- düğümlerine konmalı — böylece PA3 de korunur |
+| 4 | **ALERT/RDY iki ADS'de de boşta.** U21.2 → R109 10k pull-up, U9.2 → R32 pull-up; ikisi de MCU'ya gitmiyor | Firmware kararı 6 "V ve I aynı anda örneklenir" diyor, ama RDY olmadan bu ancak polling ile yaklaşık yapılabilir. Yedek pin bol (PB1, PB2, PB3, PB8) → iki RDY hattını almaya değer |
+
+**ERC durumu (103 ihlal, hiçbiri yeni blokla ilgili değil):** 72 × `pin_not_connected` root sheet'teki hierarchical label'lar, 15 × MCU yedek pinleri (no-connect bayrağı yok), 7 × `power_pin_not_driven` ferrit arkası raylar (U9.8/U21.8 dahil, PWR_FLAG gerekiyor), 5 × `lib_symbol_mismatch`, 4 × `multiple_net_names` (`20V`/`FULL BRIDGE RECTIFIER OUT`, `+12V`/`Opamp VCC`, `+5V`/`5V`, `+3.3V`/`3.3V`).
+
+### 10.6 Kütüphaneler global'e alındı (18.10.2026)
+
+Proje-içi `sym-lib-table` / `fp-lib-table` dosyaları kaldırıldı; artık KiCad'in global tabloları kullanılıyor ve kaynak `~/Documents/Elektronik/Library/`. ELV1 revision'daki sürümler kanonik kabul edildi (sembol kümesi global'in katı üst kümesiydi).
+
+| Değişiklik | Neden |
+|---|---|
+| `my-NMOS` → **`myNMOS`** | ELV1 revision'ın adlandırması kazandı; içerik üst küme (ek olarak IRFB7530PbF, IRFP260N, PJA3406) |
+| `mydiodes` → **`myDiodes`** | Aynı sembol kümesi, ELV1 revision'ın adlandırması |
+| `myTO247` **global'e eklendi** | Global fp tablosunda hiç yoktu, ELV1 revision PCB'si `myTO247:TO-247 Edge Castellated` kullanıyor |
+| `myNTC` footprint **birleştirildi** | ElectronicLoad `myNTC:Untitled`, ELV1 revision + ELV1 `myNTC:NTC` kullanıyor. İkisi de korundu |
+| `myFuse` **global sürüm korundu** | Global 20260206, repo'daki 20241229 — yani repo kopyası daha eski. ELV1 revision bu kütüphaneyi kullanmıyor |
+| `xt60-IRFP260N` **silindi** | Tablodaki açıklamasında zaten "kullanilmiyor - my-NMOS ile cakisiyor" yazıyordu; `IRFP260N` artık `myNMOS` içinde |
+
+ELV2, ESC ve ElectronicLoad şemalarındaki `my-NMOS:` / `mydiodes:` referansları yeni isimlere çevrildi (her birinin `*-backups/` klasörüne `*_before_libname_2026-10-18.kicad_sch` yedeği bırakıldı). Beş projenin hepsinde ERC ile doğrulandı: eksik kütüphane yok.
+
+Repo'daki `hardware/libraries/` **kasıtlı olarak korundu** — sürüm kontrolündeki asıl kaynak o. Global kopyayı tazelemek için:
+
+```
+rsync -a hardware/libraries/symbols/ ~/Documents/Elektronik/Library/symbols/
+rsync -a hardware/libraries/footprints/ ~/Documents/Elektronik/Library/footprints/
+```
+
+Eski global tabloların ve kütüphanelerin yedeği: `~/Documents/Elektronik/Library-yedek-2026-10-18/`.
+
