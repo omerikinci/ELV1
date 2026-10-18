@@ -99,6 +99,33 @@ ama ELV1 tamsayı kullanıyordu.
    kalan bir option byte yazımı çipi kilitleyebilir (errata 2.2.9).
    Çip revizyonunu oku: DBGMCU->IDCODE REV_ID; 0x2000 = Rev B,
    0x2001 = Y/1/2, 0x2003 = X/3. Rev B ise ekranda uyar.
+ - YEDEK MCU (G071CBT6 stokta yoksa) - LQFP48, PCB DEĞİŞMEDEN takılabilenler
+   (CubeMX 6.13 veritabanından pin pin karşılaştırıldı, 18.10.2026):
+     Parça            Flash/RAM     Pin farkı                  Not
+     ---------------  ------------  -------------------------  ---------------------------------
+     STM32G071C8T6    64 KB/36 KB   yok                        Aynı çip, flash yarısı. 1. TERCİH.
+     STM32G081CBT6    128 KB/36 KB  yok                        G071 + AES. Kod aynen çalışır.
+     STM32G0B1CBT6    128 KB/144 KB yok (pin 10 adı farklı)    USB+FDCAN'lı büyük kardeş;
+     (CCT6/CET6)      256-512 KB                               CubeMX'te işlemciyi değiştirip
+                                                               kodu yeniden üret.
+     STM32G070CBT6    128 KB/36 KB  pin 10 sadece NRST,        Değer serisi: DAC/COMP/UCPD yok;
+                                    29/32 NC                   bu tasarımda kullanılmıyor. Uygun.
+     STM32G051C8T6    64 KB/18 KB   29/32 NC                   DAC var. Uygun.
+     STM32G031C8T6    64 KB/8 KB    29/32 NC                   RAM az (8 KB); son çare.
+   Hepsinde kullanılan fonksiyonlar mevcut:
+     - ADC1_IN0/2/3,
+     - I2C2 (PA11/PA12),
+     - USART1 (PB6/PB7),
+     - TIM3_CH1/CH2 (PB4/PB5), TIM16_CH1 (PA6), TIM14_CH1 (PA7),
+     - HSE (PF0/PF1), SWD.
+   UYMAYANLAR:
+     - STM32C0 serisi: pin 4 VBAT değil PF3; SWD pinleri farklı.
+     - STM32G030C: pin dizilimi uyar ama 8 KB RAM; G031 ile aynı kategori.
+   Değişince firmware'de: CubeMX'te işlemci seçimi, linker script
+   (flash/RAM boyutu) ve o parçanın errata'sı kontrol edilir. Kalibrasyon
+   flash sayfası (12.5) son sayfadır; adres flash boyutuna göre değişir.
+     64 KB -> sayfa 31, 0x0800F800
+     128 KB -> sayfa 63, 0x0801F800
  - IWDG (bağımsız watchdog) aç. Önerilen süre ~500 ms. Ana döngüde besle.
    Reset olursa donanım pull'ları yükü zaten kapatır.
 
