@@ -821,6 +821,26 @@ ama ELV1 tamsayı kullanıyordu.
  [x] J4.8 / J4.14 GND'ye geri bağlandı (H16).
  [ ] Şebeke girişine X kondansatörü boşaltma direnci eklenecek, PE bağlantısı
      kontrol edilecek (H14). ELV1'de de yapılmalı.
+ [ ] J4 (20 pin, 2x10, 2.00 mm) konnektör tedariki (18.10.2026):
+     - KLS L-KLS1-XL4-2.00-2X10-H housing (KLS çiziminde "PHB 2.0") Özdisan,
+       Uraz ve KomponentStore'da stok 0.
+     - KLS gövdesi JST PHD ya da PUD ile birebir aynı değil:
+         KLS housing 22.7 x 8.6 x 8.4 mm
+         PHDR-20VS   21.9 x 5.0 x 7.3 mm
+         PUDP-20V-S  22.0 x 8.3 x 9.1 mm
+       Housing'ler birbirinin başlığına takılmaz; başlık + housing + terminal
+       aynı seriden alınmalı.
+     - Footprint (JST_PUD_B20B-PUDSS) ped ızgarası PHD/PUD/KLS üçünde de
+       aynı: 2 x 2 mm, delik Ø0.75. PCB değişmeden JST PHD takılabilir.
+     - Mouser TR'de stokta olan set:
+         B20B-PHDSS-B(LF)(SN) başlık: 744 stok, 0,58 €
+         PHDR-20VS housing:           15.073 stok, 0,28 €
+         SPHD-001T-P0.5 terminal:     319.492 stok, 0,09 € (AWG 26-22)
+     - PUDP-20V-S Mouser'da stok 0 (17.11.2026 bekleniyor).
+     - Footprint'i JST_PHD_B20B-PHDSS_2x10_P2.00mm_Vertical yapmak yalnızca
+       silkscreen ve 3D'yi düzeltir; padler değişmez.
+     - 3D baskı önerilmez: 2 mm aralıkta terminal kilit dilleri ~0.3 mm et
+       kalınlığı ister. FDM'de olmaz, reçinede kırılgan olur.
 
 ===============================================================================
  Son güncelleme: 18.10.2026
