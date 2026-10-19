@@ -83,7 +83,7 @@ static void buzzer_pattern_system_off(void);
 #define ADS1115_REG_CONV     0x00U
 #define ADS1115_REG_CONFIG   0x01U
 #define ADS1115_CFG_OS_SINGLE      0x8000U
-#define ADS1115_CFG_PGA_1024MV     0x0400U
+#define ADS1115_CFG_PGA_1024MV     0x0600U  /* PGA[11:9] = 011 */
 #define ADS1115_CFG_MODE_SINGLE    0x0100U
 #define ADS1115_CFG_DR_250SPS      0x00A0U
 #define ADS1115_CFG_COMP_DISABLE   0x0003U
