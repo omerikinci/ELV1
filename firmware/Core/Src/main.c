@@ -83,14 +83,24 @@ static void buzzer_pattern_system_off(void);
 #define ADS1115_REG_CONV     0x00U
 #define ADS1115_REG_CONFIG   0x01U
 #define ADS1115_CFG_OS_SINGLE      0x8000U
-#define ADS1115_CFG_PGA_512MV      0x0800U
+#define ADS1115_CFG_PGA_1024MV     0x0400U
 #define ADS1115_CFG_MODE_SINGLE    0x0100U
-#define ADS1115_CFG_DR_128SPS      0x0080U
+#define ADS1115_CFG_DR_250SPS      0x00A0U
 #define ADS1115_CFG_COMP_DISABLE   0x0003U
-#define ADS1115_FS_UV_CURRENT      512000L
+/* 2 MOSFET: kanal başına 5 A x 0.1R = 0.5 V + GND düşümü -> 512 mV sınırı
+   aşılır, bu yüzden ±1.024 V aralığı (1 LSB = 31.25 uV). */
+#define ADS1115_FS_UV_CURRENT      1024000L
 #define ADS1115_SAMPLES_PER_CH     8U
-#define CURRENT_ADS_CHANNEL        0U
-#define CURRENT_UV_PER_A           29586UL
+/* Takılı MOSFET/şönt kanalları: bit0 = AIN0 (AR0, U1), bit1 = AIN1 (AR1, U6),
+   bit2 = AIN2 (AR2, U12), bit3 = AIN3 (AR3, U13). ELV1: U1 + U6 takılı. */
+#define CURRENT_ADS_CH_MASK        0x03U
+/* Kanal gerilimlerinin TOPLAMI / toplam akım (uV/A). Tek uçlu ölçüm: her
+   kanal şönt + ortak GND yolunun düşümünü görür.
+     Toplam = I x (0.1R + N x Rg)
+   Eski 4 MOSFET kalibrasyonundan (tek kanal 29586 uV/A): Rg ~ 4.59 mOhm.
+   2 kanal için 0.1 + 2 x 0.00459 = 0.10917 Ohm.
+   Kalibrasyon: yeni = eski x (ekrandaki akım / multimetredeki akım). */
+#define CURRENT_UV_PER_A           109172UL
 #define CURRENT_TRIP_MA            10000UL
 #define POWER_TRIP_MW              160000UL
 #define OCP_CONFIRM_COUNT          3U
@@ -803,7 +813,7 @@ static uint8_t ads1115_read_channel_raw_cfg(uint8_t channel, uint16_t pga_cfg, i
                       ((uint16_t)(0x04U + channel) << 12) |
                       pga_cfg |
                       ADS1115_CFG_MODE_SINGLE |
-                      ADS1115_CFG_DR_128SPS |
+                      ADS1115_CFG_DR_250SPS |
                       ADS1115_CFG_COMP_DISABLE);
 
   tx[0] = ADS1115_REG_CONFIG;
@@ -873,9 +883,28 @@ static uint8_t ads1115_read_avg_microvolt_cfg(uint8_t channel, uint16_t pga_cfg,
   return 1U;
 }
 
+/* Takılı kanalların ortalama gerilimlerini toplar (uV). */
 static uint8_t ads1115_read_avg_microvolt(uint32_t *avg_uv)
 {
-  return ads1115_read_avg_microvolt_cfg(CURRENT_ADS_CHANNEL, ADS1115_CFG_PGA_512MV, ADS1115_FS_UV_CURRENT, avg_uv);
+  uint8_t ch;
+  uint32_t ch_uv = 0U;
+  uint32_t sum_uv = 0U;
+
+  for (ch = 0U; ch < 4U; ch++)
+  {
+    if ((CURRENT_ADS_CH_MASK & (1U << ch)) == 0U)
+    {
+      continue;
+    }
+    if (ads1115_read_avg_microvolt_cfg(ch, ADS1115_CFG_PGA_1024MV, ADS1115_FS_UV_CURRENT, &ch_uv) == 0U)
+    {
+      return 0U;
+    }
+    sum_uv += ch_uv;
+  }
+
+  *avg_uv = sum_uv;
+  return 1U;
 }
 /* USER CODE END 0 */
 
