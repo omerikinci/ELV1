@@ -39,7 +39,7 @@ Yeni özellikler (USB/PC bağlantısı, pot yerine encoder vb.) ELV1 revision'a 
 | Şöntler | R2, R23, R30, R45: 0.1 Ω 10 W (markasız) | R2 ve R23 yerinde: 2 x Isabellenhütte VMS-R100-1.0-U paralel = 0.05 Ω. R30, R45 söküldü. | 20.10.2026 |
 | Op-amp'ler (U2, U3) | LM358 | OPA2197 | — |
 | R1 (akım potu besleme direnci) | 440K | 440K olmalı (aşağıdaki nota bak) | 20.10.2026 |
-| Şebeke X kondansatörü boşaltması | yok | GEÇİCİ: 12 x 10 MΩ paralel (~790k), AC girişe paralel | 18.10.2026 |
+| Şebeke X kondansatörü boşaltması | yok | 1 MΩ 1 W THT, AC girişte L-N arası | 20.10.2026 |
 
 **Neden:**
 - **Şöntler:**
@@ -53,8 +53,10 @@ Yeni özellikler (USB/PC bağlantısı, pot yerine encoder vb.) ELV1 revision'a 
   - 220K ile tam tur ~20 A ister ve ISET % göstergesi yarı turda %100'e ulaşır.
 - **Boşaltma direnci:**
   - Cihaz kapalıyken fiş çekilince EMI filtresinin X kondansatöründe kalan şarj çarpıyordu.
-  - Paralel bağlı her direnç tam şebeke tepe gerilimini (~325 V) görür. 1/8 ve 1/4 W dirençler bu gerilim için uygun değil.
-  - Kalıcı çözüm: tek 1 MΩ, 1 W, 500 V direnç (Royalohm MF02WJJ0105A19).
+  - Önce geçici olarak 12 x 10 MΩ paralel (~790k) takıldı. Ancak paralel bağlı her direnç tam şebeke tepe gerilimini (~325 V) görür; 1/8 ve 1/4 W dirençler bu gerilim için uygun değil.
+  - 20.10.2026'da bunların yerine tek 1 MΩ, 1 W, 500 V direnç (Royalohm MF02WJJ0105A19) takıldı.
+
+**Durum (20.10.2026):** ELV1 tamamlandı. Bir sorun çıkmadıkça açılmayacak; geliştirme ELV1 revision'da sürüyor.
 
 **Firmware'de buna göre ayarlananlar** (`firmware/Core/Src/main.c`):
 - Akım, iki kanalın tek uçlu okumalarının toplamıdır: ADS1115 AIN0 (U1) + AIN1 (U6), `CURRENT_ADS_CH_MASK 0x03`.

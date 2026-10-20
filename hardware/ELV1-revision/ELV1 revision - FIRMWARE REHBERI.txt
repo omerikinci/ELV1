@@ -695,7 +695,9 @@ ama ELV1 tamsayı kullanıyordu.
          * 0.1 µF için 2 x 1M (toplam 2 MΩ) da yeterli: 60 V'a ~0.34 s,
            kayıp ~26 mW.
          * KARAR (18.10.2026): L-N arası tek 1 MΩ, 1 W THT.
-     - ELV1'de GEÇİCİ çözüm uygulandı (kullanıcı, 18.10.2026):
+     - ELV1 TAMAM (20.10.2026): 1 MΩ 1 W THT takıldı, geçici dirençler
+       kalktı. Revizyonda da aynı direnç kullanılacak.
+     - ELV1'de önceki GEÇİCİ çözüm (kullanıcı, 18.10.2026):
          * Yapılan: 12 x 10 MΩ (1/8-1/4 W) paralel, ölçülen ~790k, AC
            girişe paralel. Kapat-fişi çek-dokun testinde çarpma olmadı.
          * Dikkat: paralel bağlantıda her direnç tam şebeke tepe gerilimini
@@ -867,8 +869,8 @@ ama ELV1 tamsayı kullanıyordu.
          (sadece 5V TPS54302 kalır).
  [x] J4.8 / J4.14 GND'ye geri bağlandı (H16).
  [ ] Şebeke girişine X kondansatörü boşaltma direnci eklenecek, PE bağlantısı
-     kontrol edilecek (H14). ELV1'de geçici 12 x 10 MΩ paralel takıldı;
-     1 MΩ 1 W (500 V) ile değiştirilecek.
+     kontrol edilecek (H14). ELV1'de 1 MΩ 1 W takıldı (20.10.2026);
+     revizyonda yapılacak.
  [ ] Şönt ısınması (H18): R18/R19 -> kanal başına 2 x 0.2 Ohm 2512
      paralel + geniş bakır. Karar bekliyor.
  [ ] J4 (20 pin, 2x10, 2.00 mm) konnektör tedariki (18.10.2026):
