@@ -819,6 +819,49 @@ ama ELV1 tamsayı kullanıyordu.
      - Alternatif: 0.05 Ohm (VMS-R050). Isı yarıya iner ama şönt gerilimi
        de yarıya iner. Setpoint ölçeği (DAC -> op-amp) ve firmware
        katsayıları değişir; düşük akımda op-amp offset hatası iki kat olur.
+     - SEÇİLEN YÖN (kullanıcı, 20.10.2026): ELV1'deki gibi kanal başına
+       2 x VMS-R100 paralel = 0.05 Ohm. Kart başına 4 direnç. İnceleme:
+       Isı:
+         * Kanal başına 5 A -> direnç başına 2.5 A -> 0.625 W (%21).
+         * Kanal başına 6 A (tam skala) -> 0.9 W (%30).
+         * Kanal toplamı 1.25 W (0.1 Ohm'da 2.5 W).
+       Setpoint ölçeği (bölüm 6):
+         * Şu an: R2 10k / R4 2.2k, k = 0.1803, tam skala Vset 595 mV.
+           0.05 Ohm ile kanal başına 11.9 A, toplam ~24 A. DAC aralığının
+           yarısı boşa gider; firmware hatası ya da I2C bozulması 24 A
+           isteyebilir.
+         * ÖNERİ: R2 10k -> 22k (R4 2.2k kalır).
+             - k = 2.2 / 24.2 = 0.0909, tam skala Vset 300 mV.
+             - Kanal başına 6.0 A, toplam 12.0 A (bugünkü ~11.9 A ile aynı).
+             - 1 LSB = 0.0733 mV = kanal başına 1.47 mA (bugünkü 1.45 mA).
+             - Thevenin direnci 2.0 k: C11 + C13 ile tau ~20 ms (bugün
+               18 ms); kondansatörler değişmez.
+             - (R4'ü 1k yapmak da aynı k'yı verir, ama tau 9 ms'ye düşer.)
+       Op-amp hata terimi (bölüm 6, Vgate/220):
+         * 14-20 mV, 0.05 Ohm'da kanal başına 0.28-0.4 A (0.1'de 0.14-0.2).
+         * Firmware zaten ADS ile kapalı döngü düzelttiği için hedef akım
+           tutulur. Başlama kodu ~270 LSB olur (bugün ~138).
+         * İki MOSFET'in Vth farkından gelen kanal dengesizliği de iki kat:
+           ±45 mA yerine ±90 mA.
+         * OPA2197 offset (en kötü 100 µV) = kanal başına 2 mA, önemsiz.
+       ADS #1 (bölüm 7.1):
+         * 6 A x 0.05 = 0.3 V -> PGA ±0.512 V (kod 100).
+         * 1 LSB = 15.625 µV = 0.3125 mA. Çözünürlük aynı kalır.
+         * Doyum kanal başına 10.24 A.
+         * Formül: I_ch = (kod x 15.625 µV - ofset_ch) / 0.05 Ohm x kazanç_ch.
+       Ters batarya (bölüm 8 / H3): body diyotları üzerinden kısa devre
+       direnci yarıya iner. 3 V'luk hücrede ~46 A yerine ~92 A.
+       Düşük gerilim: kanal başına 5 A'de şönt düşümü 0.5 V -> 0.25 V;
+       cihaz daha düşük gerilimli kaynakları yükleyebilir.
+       Şematik/PCB değişikliği (uygulanınca):
+         * R18 ve R19'a paralel birer VMS-R100 eklenir (yeni R116, R117,
+           aynı 2512 footprint).
+         * NetTie'ler (NT1-NT4) iki direncin ortak düğümüne alınır.
+           Kelvin uçları simetrik noktadan çıkar; tek direncin pad'inden
+           alınırsa okuma kayar.
+         * R2: 10k -> 22k.
+         * Firmware: 6. bölüm (k = 0.0909, 1 LSB 1.47 mA) ve 7.1 (PGA
+           ±0.512 V, 0.05 Ohm) güncellenir.
 
 
 -------------------------------------------------------------------------------
@@ -871,8 +914,8 @@ ama ELV1 tamsayı kullanıyordu.
  [ ] Şebeke girişine X kondansatörü boşaltma direnci eklenecek, PE bağlantısı
      kontrol edilecek (H14). ELV1'de 1 MΩ 1 W takıldı (20.10.2026);
      revizyonda yapılacak.
- [ ] Şönt ısınması (H18): R18/R19 -> kanal başına 2 x 0.2 Ohm 2512
-     paralel + geniş bakır. Karar bekliyor.
+ [ ] Şönt ısınması (H18): kanal başına 2 x VMS-R100 paralel (0.05 Ohm)
+     seçildi; R2 10k -> 22k önerildi. Şematiğe işlenmedi.
  [ ] J4 (20 pin, 2x10, 2.00 mm) konnektör tedariki (18.10.2026):
      - KLS L-KLS1-XL4-2.00-2X10-H housing (KLS çiziminde "PHB 2.0") Özdisan,
        Uraz ve KomponentStore'da stok 0.
