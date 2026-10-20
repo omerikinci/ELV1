@@ -784,6 +784,30 @@ ama ELV1 tamsayı kullanıyordu.
      - 100k / 15k önerilmişti; ama yüksüz ve şebeke +%10'da 25.6 V olabilir,
        15k ile ADC 3.3 V'u aşardı. Bu yüzden 12k seçildi.
      - Firmware: koruma #13 (20V < 16.8 V -> kes).
+ H18 [AÇIK 20.10.2026] ŞÖNT ISINMASI (ELV1'de görüldü, revizyonda da aynı):
+     - ELV1'de 4 x 10 W çimento şönt söküldü. 2 MOSFET'e
+       Isabellenhütte VMS-R100 (0.1 Ohm, 2512, <20 ppm/K) takıldı.
+       12 V 10 A'de şöntler çok ısınıyor; akım kayması ise yok.
+     - Hesap:
+         * Kanal başına 5 A -> P = 5^2 x 0.1 = 2.5 W.
+         * Eski: kanal başına 2.5 A -> 0.625 W, 10 W gövdede (%6).
+         * VMS: 3 W @ uç sıcaklığı 95 °C. 170 °C'de 0'a düşer.
+         * 2.5 W için izin verilen uç sıcaklığı ~107 °C.
+         * İç ısıl direnç < 25 K/W -> eleman = uç sıcaklığı + ~62 °C.
+       Yani parça sınırının %83'ünde çalışıyor; ısıyı PCB bakırı çekmezse
+       uçlar 107 °C'yi geçer. Düşük TCR sayesinde sıcakken bile kayma
+       ~%0.2.
+     - Revizyonda R18/R19 aynı durumda (kanal başına tek 0.1 Ohm 2512,
+       5 A).
+     - Öneri (revizyon, şematik değişikliği):
+         * Kanal başına 2 x VMS-R200-1.0 (0.2 Ohm, 2512, %1) paralel.
+           Toplam yine 0.1 Ohm; firmware ve setpoint ölçeği değişmez.
+         * Parça başına 1.25 W (%42).
+         * Kelvin uçları iki direncin ortak pad düğümlerinden alınır.
+         * Her pad'e geniş bakır alan, iki yüzde döküm ve termal via.
+     - Alternatif: 0.05 Ohm (VMS-R050). Isı yarıya iner ama şönt gerilimi
+       de yarıya iner. Setpoint ölçeği (DAC -> op-amp) ve firmware
+       katsayıları değişir; düşük akımda op-amp offset hatası iki kat olur.
 
 
 -------------------------------------------------------------------------------
@@ -836,6 +860,8 @@ ama ELV1 tamsayı kullanıyordu.
  [ ] Şebeke girişine X kondansatörü boşaltma direnci eklenecek, PE bağlantısı
      kontrol edilecek (H14). ELV1'de geçici 12 x 10 MΩ paralel takıldı;
      1 MΩ 1 W (500 V) ile değiştirilecek.
+ [ ] Şönt ısınması (H18): R18/R19 -> kanal başına 2 x 0.2 Ohm 2512
+     paralel + geniş bakır. Karar bekliyor.
  [ ] J4 (20 pin, 2x10, 2.00 mm) konnektör tedariki (18.10.2026):
      - KLS L-KLS1-XL4-2.00-2X10-H housing (KLS çiziminde "PHB 2.0") Özdisan,
        Uraz ve KomponentStore'da stok 0.
