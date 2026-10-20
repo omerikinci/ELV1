@@ -805,6 +805,15 @@ ama ELV1 tamsayı kullanıyordu.
          * Parça başına 1.25 W (%42).
          * Kelvin uçları iki direncin ortak pad düğümlerinden alınır.
          * Her pad'e geniş bakır alan, iki yüzde döküm ve termal via.
+     - Stoktaki parçayla (VMS-R100-1.0-U, 0.1 Ohm) aynı sonuç, kanal başına
+       4 adet:
+         * Bağlantı: (R100 || R100) seri (R100 || R100) = 0.05 + 0.05
+           = 0.1 Ohm. Firmware ve setpoint ölçeği değişmez.
+         * Parça başına 2.5 A -> 2.5^2 x 0.1 = 0.625 W (%21).
+         * İki kanal için 8 adet.
+         * ELV1'de de uygulanabilir.
+     - VMS-R020 (20 mOhm) ile 0.1 Ohm için kanal başına 5 seri gerekir. 6
+       adet var, bu yüzden yalnız bir kanala yeter.
      - Alternatif: 0.05 Ohm (VMS-R050). Isı yarıya iner ama şönt gerilimi
        de yarıya iner. Setpoint ölçeği (DAC -> op-amp) ve firmware
        katsayıları değişir; düşük akımda op-amp offset hatası iki kat olur.
