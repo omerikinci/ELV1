@@ -49,15 +49,15 @@ ama ELV1 tamsayı kullanıyordu.
 -------------------------------------------------------------------------------
  Güç yolu (DUT = test edilen kaynak):
 
-   J6.2 (DUT +) --F2 15A-- VCC LINE --+-- U7 IRFP260N --R18 0.1R-- GND
-                                      +-- U8 IRFP260N --R19 0.1R-- GND
+   J6.2 (DUT +) --F2 15A-- VCC LINE --+-- U7 IRFP260N --R18||R116 0.05R-- GND
+                                      +-- U8 IRFP260N --R19||R117 0.05R-- GND
    J6.1 (DUT -) = GND1 --U10 IRFB4110 (D=GND1, S=GND)-- kart GND
 
    J7 (batarya XT60): J7.2 = VCC LINE, J7.1 = kart GND
      -> F2'yi, U10'u ve ters polarite algılamasını ATLAR (bkz. 15. bölüm).
 
  Kontrol döngüsü (iki kanal, ortak setpoint):
-   MCP4725 (I2C) -> R2 10k / R4 2.2k (x0.1803) -> C11/C13 filtre -> Q1 kelepçe
+   MCP4725 (I2C) -> R2 22k / R4 2.2k (x0.0909) -> C11/C13 filtre -> Q1 kelepçe
    -> U4A/U4B OPA2197 -> U7/U8 gate. Geri besleme şöntlerden.
 
  Ölçüm:
@@ -261,13 +261,14 @@ ama ELV1 tamsayı kullanıyordu.
 -------------------------------------------------------------------------------
  Zincir:
    MCP4725 kodu -> Vdac = kod x 3300 / 4096  (referans = 3.3 V besleme)
-   Vset = Vdac x 2.2 / 12.2 = Vdac x 0.18033   (R2 10k / R4 2.2k)
-   Tam skala (kod 4095): Vset = 595 mV -> kanal başına ~5.9 A, toplam ~11.9 A
-   1 LSB = 0.145 mV setpoint = kanal başına ~1.45 mA (toplam ~2.9 mA)
+   Vset = Vdac x 2.2 / 24.2 = Vdac x 0.09091   (R2 22k / R4 2.2k, H18)
+   Tam skala (kod 4095): Vset = 300 mV -> kanal başına ~6.0 A, toplam ~12.0 A
+   1 LSB = 0.0733 mV setpoint = kanal başına ~1.47 mA (toplam ~2.9 mA)
+   Şönt kanal başına 0.05 Ohm (R18||R116, R19||R117; 2 x VMS-R100).
 
  Gerçek akım (kanal başına, yaklaşık):
-   I = (1.0045 x Vset - Vgate / 220) / 0.1 Ohm
-   - Vgate/220 terimi R8 220k geri beslemesinden gelir: 14-20 mV ≈ 0.14-0.2 A
+   I = (1.0045 x Vset - Vgate / 220) / 0.05 Ohm
+   - Vgate/220 terimi R8 220k geri beslemesinden gelir: 14-20 mV ≈ 0.28-0.4 A
      ofset.
    - Bu terim MOSFET'e, sıcaklığa ve akıma göre değişir.
    - Sonuç: açık döngü setpoint YETERSİZ. Firmware, ADS #1 ile ölçülen toplam
@@ -299,10 +300,10 @@ ama ELV1 tamsayı kullanıyordu.
  7.1 ADS1115 #1 (U9, 0x48) - AKIM
    - MUX 000 (AIN0-AIN1) = kanal 1 (U7, R18)
    - MUX 011 (AIN2-AIN3) = kanal 2 (U8, R19)
-   - PGA ±1.024 V (FSR kodu 011)
-     -> 1 LSB = 31.25 µV = 0.3125 mA; kanal başına 10.24 A'e kadar.
-     ±0.512 V YETMEZ (5.12 A'de doyuma girer).
-   - I_ch [mA] = (kod x 31.25 µV - ofset_ch) / 0.1 Ohm x kazanç_ch
+   - PGA ±0.512 V (FSR kodu 100)  (H18: şönt 0.05 Ohm)
+     -> 1 LSB = 15.625 µV = 0.3125 mA; kanal başına 10.24 A'e kadar.
+     Tam skala 6 A'de 0.3 V. ±0.256 V YETMEZ (5.12 A'de doyuma girer).
+   - I_ch [mA] = (kod x 15.625 µV - ofset_ch) / 0.05 Ohm x kazanç_ch
    - Şöntler Kelvin bağlı (NetTie NT1-NT4). Giriş filtresi: 100R +
      22 nF ortak mod + 220 nF diferansiyel.
    - Single-shot mod, 475 veya 860 SPS. Her MUX değişiminden sonra yeni
@@ -516,10 +517,10 @@ ama ELV1 tamsayı kullanıyordu.
    2. DAC'ı artırarak toplam ~0.5 A ve ~4 A noktalarını ölç.
    3. Kanal kazançları için kanallardan birini ayrıca doğrulamak gerekir.
       Pratik yol: iki kanalın toplamını ampermetreyle eşle ve aynı kazancı
-      iki kanala da ver; şöntler aynı (0.1 Ohm, 2512).
+      iki kanala da ver; şöntler aynı (0.05 Ohm, 2 x 2512 paralel).
    4. Kayıt: kazanc_I1, kazanc_I2.
    5. Aynı ölçümlerden setpoint modeli: kod_baslangic (akımın başladığı DAC
-      kodu, ~100-120) ve egim (mA / kod).
+      kodu, ~200-270; H18 ölçeğiyle) ve egim (mA / kod).
 
  12.5 Kayıt formatı (flash):
    - G071CB: 128 KB, sayfa 2 KB. Son sayfa = sayfa 63, 0x0801F800.
@@ -654,8 +655,8 @@ ama ELV1 tamsayı kullanıyordu.
          * Şönt düşümü eklenince op-amp çıkışında 5 A'de ~5.4 V, 10 A'de
            ~6.2 V gerekiyor.
          * OPA2197 12 V'ta ~11-11.8 V verir: yaklaşık 2 kat pay var.
-         * Düşük DUT geriliminde sınırı op-amp değil şönt (0.1 Ohm) ve
-           R_DS(on) belirler: kanal başına 5 A'de en az ~0.75 V + U10 düşümü.
+         * Düşük DUT geriliminde sınırı op-amp değil şönt (0.05 Ohm) ve
+           R_DS(on) belirler: kanal başına 5 A'de en az ~0.5 V + U10 düşümü.
          * U10 gate'i 12 V ile ~11.9 V olur (IRFB4110 R_DS(on) 10 V'ta
            tanımlı).
          * Sıcaklık arttıkça VGS(th) düşer; daha az gate gerilimi gerekir.
@@ -786,7 +787,7 @@ ama ELV1 tamsayı kullanıyordu.
      - 100k / 15k önerilmişti; ama yüksüz ve şebeke +%10'da 25.6 V olabilir,
        15k ile ADC 3.3 V'u aşardı. Bu yüzden 12k seçildi.
      - Firmware: koruma #13 (20V < 16.8 V -> kes).
- H18 [AÇIK 20.10.2026] ŞÖNT ISINMASI (ELV1'de görüldü, revizyonda da aynı):
+ H18 [UYGULANDI 20.10.2026] ŞÖNT ISINMASI (ELV1'de görüldü, revizyonda da aynı):
      - ELV1'de 4 x 10 W çimento şönt söküldü. 2 MOSFET'e
        Isabellenhütte VMS-R100 (0.1 Ohm, 2512, <20 ppm/K) takıldı.
        12 V 10 A'de şöntler çok ısınıyor; akım kayması ise yok.
@@ -853,7 +854,7 @@ ama ELV1 tamsayı kullanıyordu.
        direnci yarıya iner. 3 V'luk hücrede ~46 A yerine ~92 A.
        Düşük gerilim: kanal başına 5 A'de şönt düşümü 0.5 V -> 0.25 V;
        cihaz daha düşük gerilimli kaynakları yükleyebilir.
-       Şematik/PCB değişikliği (uygulanınca):
+       Şematik değişikliği (UYGULANDI 20.10.2026; PCB'de yerleşim bekliyor):
          * R18 ve R19'a paralel birer VMS-R100 eklenir (yeni R116, R117,
            aynı 2512 footprint).
          * NetTie'ler (NT1-NT4) iki direncin ortak düğümüne alınır.
@@ -914,8 +915,10 @@ ama ELV1 tamsayı kullanıyordu.
  [ ] Şebeke girişine X kondansatörü boşaltma direnci eklenecek, PE bağlantısı
      kontrol edilecek (H14). ELV1'de 1 MΩ 1 W takıldı (20.10.2026);
      revizyonda yapılacak.
- [ ] Şönt ısınması (H18): kanal başına 2 x VMS-R100 paralel (0.05 Ohm)
-     seçildi; R2 10k -> 22k önerildi. Şematiğe işlenmedi.
+ [x] Şönt ısınması (H18): R116/R117 (VMS-R100) R18/R19'a paralel, R2 22k.
+     Şematikte uygulandı (20.10.2026).
+ [ ] PCB: R116/R117 yerleşimi. Kelvin (NT1-NT4) iki direncin ortak
+     düğümünden, simetrik; her pad'e geniş bakır ve termal via.
  [ ] J4 (20 pin, 2x10, 2.00 mm) konnektör tedariki (18.10.2026):
      - KLS L-KLS1-XL4-2.00-2X10-H housing (KLS çiziminde "PHB 2.0") Özdisan,
        Uraz ve KomponentStore'da stok 0.

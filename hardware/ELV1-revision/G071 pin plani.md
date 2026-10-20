@@ -99,8 +99,8 @@ Geliştirme kartı kullanımı için bu pinler, 3.3V ve GND ile birlikte bir gen
 ### Mevcut setpoint zinciri (netlist'ten)
 
 ```
-MCP4725 (Vref = 3.3V LDO) → R2 10k / R4 2.2k (×0.180) → C11 100n + C13 10µ ─┬─ R6 1k → U4A+ → U7 (IRFP260N), shunt R18 0.1Ω
-                                     Q1 (DAC CONTROL kelepçesi) ─────────────┘─ R7 1k → U4B+ → U8 (IRFP260N), shunt R19 0.1Ω
+MCP4725 (Vref = 3.3V LDO) → R2 22k / R4 2.2k (×0.0909) → C11 100n + C13 10µ ─┬─ R6 1k → U4A+ → U7 (IRFP260N), shunt R18||R116 0.05Ω
+                                      Q1 (DAC CONTROL kelepçesi) ──────────────┘─ R7 1k → U4B+ → U8 (IRFP260N), shunt R19||R117 0.05Ω
 ```
 
 - Tam skala: 3.3 V × 0.180 = 0.595 V setpoint. Bu, kanal başına 5.95 A, toplamda yaklaşık 11.9 A eder.
@@ -220,7 +220,7 @@ J6.1 (DUT −) = GND1 ── U10 IRFB4110 drain
 1. **J5 ("outside for batteries") korumayı tamamen atlıyor.**
    - J5.1 doğrudan board GND'ye, J5.2 doğrudan VCC LINE'a bağlı.
    - Yolda U10 yok, **F2 sigortası yok**, opto/RCP algılaması yok.
-   - Ters bağlanan bir batarya, U7/U8 body diyotları ve 0.1 Ω şöntler (R18/R19, 2512) üzerinden kısa devre olur. 3 V'luk bir hücrede bile (3 − 0.7) / 0.05 ≈ 46 A eder.
+   - Ters bağlanan bir batarya, U7/U8 body diyotları ve şöntler (kanal başına 2 x 0.1 Ω paralel = 0.05 Ω, 2512) üzerinden kısa devre olur. 3 V'luk bir hücrede bile (3 − 0.7) / 0.025 ≈ 92 A eder.
    - Ayrıca J5'in eksi ucu doğrudan board GND'ye, dolayısıyla USB üzerinden PC GND'sine bağlı.
    - → J5 ya U10'un arkasına (GND1 tarafına) ve F2'nin önüne alınmalı ya da kaldırılmalı.
 2. **/OUT CONTROL işlemciye bağlı değil.** → **ÇÖZÜLDÜ (18.10.2026).** PB12'ye (U20.24) bağlandı, netlist ile doğrulandı. Reset anında R42 pull-up yolu kapalı tutuyor; firmware LOW vererek açar. "Tüm yük akımı body diyodundan geçer" riski kalktı. Firmware yük akımı vermeden önce U10'u açmak zorunda (bkz. yukarıdaki Düzeltme).

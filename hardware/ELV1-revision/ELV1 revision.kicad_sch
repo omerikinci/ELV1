@@ -24699,25 +24699,25 @@
 		(dnp no)
 		(uuid "219cf477-92e3-4e73-9e3b-9c105cc7a33d")
 		(property "Reference" "R19"
-			(at 214.63 101.5999 0)
+			(at 210.82 101.5999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.016 1.016)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "0.1R SHUNT RESISTOR"
-			(at 214.63 104.14 0)
+		(property "Value" "0.1R VMS-R100"
+			(at 210.82 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder"
@@ -25740,25 +25740,25 @@
 		(dnp no)
 		(uuid "28fcdcb0-1c83-4ba5-aab8-abcecadbba6d")
 		(property "Reference" "R18"
-			(at 214.63 53.3399 0)
+			(at 210.82 53.3399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.016 1.016)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "0.1R SHUNT RESISTOR"
-			(at 214.63 55.88 0)
+		(property "Value" "0.1R VMS-R100"
+			(at 210.82 55.88 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder"
@@ -36715,7 +36715,7 @@
 				)
 			)
 		)
-		(property "Value" "10K"
+		(property "Value" "22K"
 			(at 698.5 463.55 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -49885,6 +49885,248 @@
 				)
 			)
 		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 217.17 54.61 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "92f0c934-359e-4e9d-96b3-27cc7742d068")
+		(property "Reference" "R116"
+			(at 219.71 53.3399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1R VMS-R100"
+			(at 219.71 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder"
+			(at 217.17 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 217.17 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 217.17 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d913db0a-b46e-47b1-ac7d-a5457bc829e3")
+		)
+		(pin "2"
+			(uuid "c6809637-73d2-406f-ad2f-966fc45f6e16")
+		)
+		(instances
+			(project "ELV1 revision"
+				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
+					(reference "R116")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 217.17 52.07) (xy 217.17 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "65ba5d0e-7132-44f0-b649-9f611681593e")
+	)
+	(wire
+		(pts
+			(xy 217.17 50.8) (xy 212.09 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0889d85a-da38-4041-a501-3a019a2741dd")
+	)
+	(wire
+		(pts
+			(xy 217.17 57.15) (xy 217.17 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "665a32eb-0a86-442d-8875-caa65484e9e2")
+	)
+	(wire
+		(pts
+			(xy 217.17 58.42) (xy 212.09 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4e055c6-a3da-4439-bf24-6a96be707d6b")
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 217.17 102.87 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6a4a6452-9cc4-4090-90d7-abc29a161964")
+		(property "Reference" "R117"
+			(at 219.71 101.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1R VMS-R100"
+			(at 219.71 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder"
+			(at 217.17 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 217.17 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 217.17 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3c255e77-6ccc-4a46-b418-8c3ec27f643a")
+		)
+		(pin "2"
+			(uuid "1af5d681-e6a0-470b-b0be-992cc1fc43a1")
+		)
+		(instances
+			(project "ELV1 revision"
+				(path "/a1d40612-f2bd-4e83-b9b3-fa72862cc7a8"
+					(reference "R117")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 217.17 100.33) (xy 217.17 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "96dcb65d-9af5-4c25-baa8-32de069fa37a")
+	)
+	(wire
+		(pts
+			(xy 217.17 99.06) (xy 212.09 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b28551f0-5af3-40d4-9782-8115b2217906")
+	)
+	(wire
+		(pts
+			(xy 217.17 105.41) (xy 217.17 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2aa8a618-623d-4137-af4b-2eb77e7e05b6")
+	)
+	(wire
+		(pts
+			(xy 217.17 106.68) (xy 212.09 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f90fe70-d67a-4016-a7ff-8fc4200f6965")
 	)
 	(sheet_instances
 		(path "/"
