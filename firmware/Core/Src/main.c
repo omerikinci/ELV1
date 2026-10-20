@@ -83,24 +83,27 @@ static void buzzer_pattern_system_off(void);
 #define ADS1115_REG_CONV     0x00U
 #define ADS1115_REG_CONFIG   0x01U
 #define ADS1115_CFG_OS_SINGLE      0x8000U
-#define ADS1115_CFG_PGA_1024MV     0x0600U  /* PGA[11:9] = 011 */
+#define ADS1115_CFG_PGA_512MV      0x0800U  /* PGA[11:9] = 100 */
 #define ADS1115_CFG_MODE_SINGLE    0x0100U
 #define ADS1115_CFG_DR_250SPS      0x00A0U
 #define ADS1115_CFG_COMP_DISABLE   0x0003U
-/* 2 MOSFET: kanal başına 5 A x 0.1R = 0.5 V + GND düşümü -> 512 mV sınırı
-   aşılır, bu yüzden ±1.024 V aralığı (1 LSB = 31.25 uV). */
-#define ADS1115_FS_UV_CURRENT      1024000L
+/* ELV1 donanımı (repodaki şemadan farklı): 2 MOSFET (U1, U6), kanal başına
+   0.05R (2 x 0.1R VMS paralel), op-amp OPA2197.
+   Kanal başına 5 A x 0.05R = 0.25 V + GND düşümü ~0.05 V -> ±0.512 V
+   aralığı yeter (1 LSB = 15.6 uV ~ 0.3 mA). */
+#define ADS1115_FS_UV_CURRENT      512000L
 #define ADS1115_SAMPLES_PER_CH     8U
 /* Takılı MOSFET/şönt kanalları: bit0 = AIN0 (AR0, U1), bit1 = AIN1 (AR1, U6),
    bit2 = AIN2 (AR2, U12), bit3 = AIN3 (AR3, U13). ELV1: U1 + U6 takılı. */
 #define CURRENT_ADS_CH_MASK        0x03U
 /* Kanal gerilimlerinin TOPLAMI / toplam akım (uV/A). Tek uçlu ölçüm: her
    kanal şönt + ortak GND yolunun düşümünü görür.
-     Toplam = I x (0.1R + N x Rg)
+     Toplam = I x (Rs + N x Rg)
    Eski 4 MOSFET kalibrasyonundan (tek kanal 29586 uV/A): Rg ~ 4.59 mOhm.
-   2 kanal için 0.1 + 2 x 0.00459 = 0.10917 Ohm.
+   2 kanal, Rs = 0.05R: 0.05 + 2 x 0.00459 = 0.05917 Ohm.
+   (Önceki 2 x 0.1R hali: 109172; kartta doğru okuyordu.)
    Kalibrasyon: yeni = eski x (ekrandaki akım / multimetredeki akım). */
-#define CURRENT_UV_PER_A           109172UL
+#define CURRENT_UV_PER_A           59172UL
 #define CURRENT_TRIP_MA            10000UL
 #define POWER_TRIP_MW              160000UL
 #define OCP_CONFIRM_COUNT          3U
@@ -896,7 +899,7 @@ static uint8_t ads1115_read_avg_microvolt(uint32_t *avg_uv)
     {
       continue;
     }
-    if (ads1115_read_avg_microvolt_cfg(ch, ADS1115_CFG_PGA_1024MV, ADS1115_FS_UV_CURRENT, &ch_uv) == 0U)
+    if (ads1115_read_avg_microvolt_cfg(ch, ADS1115_CFG_PGA_512MV, ADS1115_FS_UV_CURRENT, &ch_uv) == 0U)
     {
       return 0U;
     }
