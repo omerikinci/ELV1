@@ -49,15 +49,15 @@ ama ELV1 tamsayı kullanıyordu.
 -------------------------------------------------------------------------------
  Güç yolu (DUT = test edilen kaynak):
 
-   J6.2 (DUT +) --F2 15A-- VCC LINE --+-- U7 IRFP260N --R18 0.1R-- GND
-                                      +-- U8 IRFP260N --R19 0.1R-- GND
+   J6.2 (DUT +) --F2 15A-- VCC LINE --+-- U7 IRFP260N --R18||R116 0.05R-- GND
+                                      +-- U8 IRFP260N --R19||R117 0.05R-- GND
    J6.1 (DUT -) = GND1 --U10 IRFB4110 (D=GND1, S=GND)-- kart GND
 
    J7 (batarya XT60): J7.2 = VCC LINE, J7.1 = kart GND
      -> F2'yi, U10'u ve ters polarite algılamasını ATLAR (bkz. 15. bölüm).
 
  Kontrol döngüsü (iki kanal, ortak setpoint):
-   MCP4725 (I2C) -> R2 10k / R4 2.2k (x0.1803) -> C11/C13 filtre -> Q1 kelepçe
+   MCP4725 (I2C) -> R2 22k / R4 2.2k (x0.0909) -> C11/C13 filtre -> Q1 kelepçe
    -> U4A/U4B OPA2197 -> U7/U8 gate. Geri besleme şöntlerden.
 
  Ölçüm:
@@ -99,6 +99,40 @@ ama ELV1 tamsayı kullanıyordu.
    kalan bir option byte yazımı çipi kilitleyebilir (errata 2.2.9).
    Çip revizyonunu oku: DBGMCU->IDCODE REV_ID; 0x2000 = Rev B,
    0x2001 = Y/1/2, 0x2003 = X/3. Rev B ise ekranda uyar.
+ - YEDEK MCU (G071CBT6 stokta yoksa) - LQFP48, PCB DEĞİŞMEDEN takılabilenler
+   (CubeMX 6.13 veritabanından pin pin karşılaştırıldı, 18.10.2026):
+     Parça            Flash/RAM     Pin farkı                  Not
+     ---------------  ------------  -------------------------  ---------------------------------
+     STM32G071C8T6    64 KB/36 KB   yok                        Aynı çip, flash yarısı. 1. TERCİH.
+     STM32G081CBT6    128 KB/36 KB  yok                        G071 + AES. Kod aynen çalışır.
+     STM32G0B1CBT6    128 KB/144 KB yok (pin 10 adı farklı)    USB+FDCAN'lı büyük kardeş;
+     (CCT6/CET6)      256-512 KB                               CubeMX'te işlemciyi değiştirip
+                                                               kodu yeniden üret.
+     STM32G070CBT6    128 KB/36 KB  pin 10 sadece NRST,        Değer serisi: DAC/COMP/UCPD yok;
+                                    29/32 NC                   bu tasarımda kullanılmıyor. Uygun.
+     STM32G051C8T6    64 KB/18 KB   29/32 NC                   DAC var. Uygun.
+     STM32G031C8T6    64 KB/8 KB    29/32 NC                   RAM az (8 KB); son çare.
+   Hepsinde kullanılan fonksiyonlar mevcut:
+     - ADC1_IN0/2/3,
+     - I2C2 (PA11/PA12),
+     - USART1 (PB6/PB7),
+     - TIM3_CH1/CH2 (PB4/PB5), TIM16_CH1 (PA6), TIM14_CH1 (PA7),
+     - HSE (PF0/PF1), SWD.
+   TEDARİK (18.10.2026, Chrome ile bakıldı; KDV hariç):
+     - STM32G071CBT6, Farnell TR (tr.farnell.com, kod 2980900): 18.665 stok,
+       1+ 3,84 €, 10+ 2,46 €, 25+ 2,22 €, 100+ 2,00 €.
+     - STM32G071CBT6, Mouser TR (511-STM32G071CBT6): 582 stok (+3000 beklenen
+       22.02.2027), 1 adet 3,89 €, 10 adet 2,75 €, 100 adet 2,20 €.
+     - Octopart: element14 21.518; Arrow 3.736; G071C8T6 Arrow 3.967.
+     - Özdisan'da G071 ve yedeklerin hiçbiri stokta yoktu.
+   UYMAYANLAR:
+     - STM32C0 serisi: pin 4 VBAT değil PF3; SWD pinleri farklı.
+     - STM32G030C: pin dizilimi uyar ama 8 KB RAM; G031 ile aynı kategori.
+   Değişince firmware'de: CubeMX'te işlemci seçimi, linker script
+   (flash/RAM boyutu) ve o parçanın errata'sı kontrol edilir. Kalibrasyon
+   flash sayfası (12.5) son sayfadır; adres flash boyutuna göre değişir.
+     64 KB -> sayfa 31, 0x0800F800
+     128 KB -> sayfa 63, 0x0801F800
  - IWDG (bağımsız watchdog) aç. Önerilen süre ~500 ms. Ana döngüde besle.
    Reset olursa donanım pull'ları yükü zaten kapatır.
 
@@ -227,13 +261,14 @@ ama ELV1 tamsayı kullanıyordu.
 -------------------------------------------------------------------------------
  Zincir:
    MCP4725 kodu -> Vdac = kod x 3300 / 4096  (referans = 3.3 V besleme)
-   Vset = Vdac x 2.2 / 12.2 = Vdac x 0.18033   (R2 10k / R4 2.2k)
-   Tam skala (kod 4095): Vset = 595 mV -> kanal başına ~5.9 A, toplam ~11.9 A
-   1 LSB = 0.145 mV setpoint = kanal başına ~1.45 mA (toplam ~2.9 mA)
+   Vset = Vdac x 2.2 / 24.2 = Vdac x 0.09091   (R2 22k / R4 2.2k, H18)
+   Tam skala (kod 4095): Vset = 300 mV -> kanal başına ~6.0 A, toplam ~12.0 A
+   1 LSB = 0.0733 mV setpoint = kanal başına ~1.47 mA (toplam ~2.9 mA)
+   Şönt kanal başına 0.05 Ohm (R18||R116, R19||R117; 2 x VMS-R100).
 
  Gerçek akım (kanal başına, yaklaşık):
-   I = (1.0045 x Vset - Vgate / 220) / 0.1 Ohm
-   - Vgate/220 terimi R8 220k geri beslemesinden gelir: 14-20 mV ≈ 0.14-0.2 A
+   I = (1.0045 x Vset - Vgate / 220) / 0.05 Ohm
+   - Vgate/220 terimi R8 220k geri beslemesinden gelir: 14-20 mV ≈ 0.28-0.4 A
      ofset.
    - Bu terim MOSFET'e, sıcaklığa ve akıma göre değişir.
    - Sonuç: açık döngü setpoint YETERSİZ. Firmware, ADS #1 ile ölçülen toplam
@@ -265,10 +300,10 @@ ama ELV1 tamsayı kullanıyordu.
  7.1 ADS1115 #1 (U9, 0x48) - AKIM
    - MUX 000 (AIN0-AIN1) = kanal 1 (U7, R18)
    - MUX 011 (AIN2-AIN3) = kanal 2 (U8, R19)
-   - PGA ±1.024 V (FSR kodu 011)
-     -> 1 LSB = 31.25 µV = 0.3125 mA; kanal başına 10.24 A'e kadar.
-     ±0.512 V YETMEZ (5.12 A'de doyuma girer).
-   - I_ch [mA] = (kod x 31.25 µV - ofset_ch) / 0.1 Ohm x kazanç_ch
+   - PGA ±0.512 V (FSR kodu 100)  (H18: şönt 0.05 Ohm)
+     -> 1 LSB = 15.625 µV = 0.3125 mA; kanal başına 10.24 A'e kadar.
+     Tam skala 6 A'de 0.3 V. ±0.256 V YETMEZ (5.12 A'de doyuma girer).
+   - I_ch [mA] = (kod x 15.625 µV - ofset_ch) / 0.05 Ohm x kazanç_ch
    - Şöntler Kelvin bağlı (NetTie NT1-NT4). Giriş filtresi: 100R +
      22 nF ortak mod + 220 nF diferansiyel.
    - Single-shot mod, 475 veya 860 SPS. Her MUX değişiminden sonra yeni
@@ -482,10 +517,10 @@ ama ELV1 tamsayı kullanıyordu.
    2. DAC'ı artırarak toplam ~0.5 A ve ~4 A noktalarını ölç.
    3. Kanal kazançları için kanallardan birini ayrıca doğrulamak gerekir.
       Pratik yol: iki kanalın toplamını ampermetreyle eşle ve aynı kazancı
-      iki kanala da ver; şöntler aynı (0.1 Ohm, 2512).
+      iki kanala da ver; şöntler aynı (0.05 Ohm, 2 x 2512 paralel).
    4. Kayıt: kazanc_I1, kazanc_I2.
    5. Aynı ölçümlerden setpoint modeli: kod_baslangic (akımın başladığı DAC
-      kodu, ~100-120) ve egim (mA / kod).
+      kodu, ~200-270; H18 ölçeğiyle) ve egim (mA / kod).
 
  12.5 Kayıt formatı (flash):
    - G071CB: 128 KB, sayfa 2 KB. Son sayfa = sayfa 63, 0x0801F800.
@@ -620,8 +655,8 @@ ama ELV1 tamsayı kullanıyordu.
          * Şönt düşümü eklenince op-amp çıkışında 5 A'de ~5.4 V, 10 A'de
            ~6.2 V gerekiyor.
          * OPA2197 12 V'ta ~11-11.8 V verir: yaklaşık 2 kat pay var.
-         * Düşük DUT geriliminde sınırı op-amp değil şönt (0.1 Ohm) ve
-           R_DS(on) belirler: kanal başına 5 A'de en az ~0.75 V + U10 düşümü.
+         * Düşük DUT geriliminde sınırı op-amp değil şönt (0.05 Ohm) ve
+           R_DS(on) belirler: kanal başına 5 A'de en az ~0.5 V + U10 düşümü.
          * U10 gate'i 12 V ile ~11.9 V olur (IRFB4110 R_DS(on) 10 V'ta
            tanımlı).
          * Sıcaklık arttıkça VGS(th) düşer; daha az gate gerilimi gerekir.
@@ -661,6 +696,22 @@ ama ELV1 tamsayı kullanıyordu.
          * 0.1 µF için 2 x 1M (toplam 2 MΩ) da yeterli: 60 V'a ~0.34 s,
            kayıp ~26 mW.
          * KARAR (18.10.2026): L-N arası tek 1 MΩ, 1 W THT.
+     - ELV1 TAMAM (20.10.2026): 1 MΩ 1 W THT takıldı, geçici dirençler
+       kalktı. Revizyonda da aynı direnç kullanılacak.
+     - ELV1'de önceki GEÇİCİ çözüm (kullanıcı, 18.10.2026):
+         * Yapılan: 12 x 10 MΩ (1/8-1/4 W) paralel, ölçülen ~790k, AC
+           girişe paralel. Kapat-fişi çek-dokun testinde çarpma olmadı.
+         * Dikkat: paralel bağlantıda her direnç tam şebeke tepe gerilimini
+           (325 V) görür. 1/4 W metal film tipik 250 V, 1/8 W 150-200 V
+           çalışma gerilimlidir; bu dirençler sınır üstünde çalışıyor.
+         * Kalıcı çözüm: stoktaki MF02WJJ0105A19 (1 MΩ 1 W, 500 V) ile
+           değiştir.
+         * Ara çözüm: aynı 12 direnci 2 seri x 6 paralel bağla.
+             - Toplam ~3.3 MΩ, direnç başına ~163 V tepe.
+             - 0.1 µF'ta 60 V'a ~0.56 s.
+             - 1/8 W dirençlerin gerilim değeri yine sınırda olabilir.
+         * Ölçerek test: fişi çektikten hemen sonra fiş pinleri arasında
+           multimetre DC V ile 60 V altını gör (elle dokunmadan).
              - 60 V'a ~0.17 s'de iner, kayıp ~53 mW.
              - Direncin "maks. çalışma gerilimi" en az 350 V, tercihen
                500 V olmalı (metal film / metal oksit; datasheet'ten bak).
@@ -736,6 +787,82 @@ ama ELV1 tamsayı kullanıyordu.
      - 100k / 15k önerilmişti; ama yüksüz ve şebeke +%10'da 25.6 V olabilir,
        15k ile ADC 3.3 V'u aşardı. Bu yüzden 12k seçildi.
      - Firmware: koruma #13 (20V < 16.8 V -> kes).
+ H18 [UYGULANDI 20.10.2026] ŞÖNT ISINMASI (ELV1'de görüldü, revizyonda da aynı):
+     - ELV1'de 4 x 10 W çimento şönt söküldü. 2 MOSFET'e
+       Isabellenhütte VMS-R100 (0.1 Ohm, 2512, <20 ppm/K) takıldı.
+       12 V 10 A'de şöntler çok ısınıyor; akım kayması ise yok.
+     - Hesap:
+         * Kanal başına 5 A -> P = 5^2 x 0.1 = 2.5 W.
+         * Eski: kanal başına 2.5 A -> 0.625 W, 10 W gövdede (%6).
+         * VMS: 3 W @ uç sıcaklığı 95 °C. 170 °C'de 0'a düşer.
+         * 2.5 W için izin verilen uç sıcaklığı ~107 °C.
+         * İç ısıl direnç < 25 K/W -> eleman = uç sıcaklığı + ~62 °C.
+       Yani parça sınırının %83'ünde çalışıyor; ısıyı PCB bakırı çekmezse
+       uçlar 107 °C'yi geçer. Düşük TCR sayesinde sıcakken bile kayma
+       ~%0.2.
+     - Revizyonda R18/R19 aynı durumda (kanal başına tek 0.1 Ohm 2512,
+       5 A).
+     - Öneri (revizyon, şematik değişikliği):
+         * Kanal başına 2 x VMS-R200-1.0 (0.2 Ohm, 2512, %1) paralel.
+           Toplam yine 0.1 Ohm; firmware ve setpoint ölçeği değişmez.
+         * Parça başına 1.25 W (%42).
+         * Kelvin uçları iki direncin ortak pad düğümlerinden alınır.
+         * Her pad'e geniş bakır alan, iki yüzde döküm ve termal via.
+     - Stoktaki parçayla (VMS-R100-1.0-U, 0.1 Ohm) aynı sonuç, kanal başına
+       4 adet:
+         * Bağlantı: (R100 || R100) seri (R100 || R100) = 0.05 + 0.05
+           = 0.1 Ohm. Firmware ve setpoint ölçeği değişmez.
+         * Parça başına 2.5 A -> 2.5^2 x 0.1 = 0.625 W (%21).
+         * İki kanal için 8 adet.
+         * ELV1'de de uygulanabilir.
+     - VMS-R020 (20 mOhm) ile 0.1 Ohm için kanal başına 5 seri gerekir. 6
+       adet var, bu yüzden yalnız bir kanala yeter.
+     - Alternatif: 0.05 Ohm (VMS-R050). Isı yarıya iner ama şönt gerilimi
+       de yarıya iner. Setpoint ölçeği (DAC -> op-amp) ve firmware
+       katsayıları değişir; düşük akımda op-amp offset hatası iki kat olur.
+     - SEÇİLEN YÖN (kullanıcı, 20.10.2026): ELV1'deki gibi kanal başına
+       2 x VMS-R100 paralel = 0.05 Ohm. Kart başına 4 direnç. İnceleme:
+       Isı:
+         * Kanal başına 5 A -> direnç başına 2.5 A -> 0.625 W (%21).
+         * Kanal başına 6 A (tam skala) -> 0.9 W (%30).
+         * Kanal toplamı 1.25 W (0.1 Ohm'da 2.5 W).
+       Setpoint ölçeği (bölüm 6):
+         * Şu an: R2 10k / R4 2.2k, k = 0.1803, tam skala Vset 595 mV.
+           0.05 Ohm ile kanal başına 11.9 A, toplam ~24 A. DAC aralığının
+           yarısı boşa gider; firmware hatası ya da I2C bozulması 24 A
+           isteyebilir.
+         * ÖNERİ: R2 10k -> 22k (R4 2.2k kalır).
+             - k = 2.2 / 24.2 = 0.0909, tam skala Vset 300 mV.
+             - Kanal başına 6.0 A, toplam 12.0 A (bugünkü ~11.9 A ile aynı).
+             - 1 LSB = 0.0733 mV = kanal başına 1.47 mA (bugünkü 1.45 mA).
+             - Thevenin direnci 2.0 k: C11 + C13 ile tau ~20 ms (bugün
+               18 ms); kondansatörler değişmez.
+             - (R4'ü 1k yapmak da aynı k'yı verir, ama tau 9 ms'ye düşer.)
+       Op-amp hata terimi (bölüm 6, Vgate/220):
+         * 14-20 mV, 0.05 Ohm'da kanal başına 0.28-0.4 A (0.1'de 0.14-0.2).
+         * Firmware zaten ADS ile kapalı döngü düzelttiği için hedef akım
+           tutulur. Başlama kodu ~270 LSB olur (bugün ~138).
+         * İki MOSFET'in Vth farkından gelen kanal dengesizliği de iki kat:
+           ±45 mA yerine ±90 mA.
+         * OPA2197 offset (en kötü 100 µV) = kanal başına 2 mA, önemsiz.
+       ADS #1 (bölüm 7.1):
+         * 6 A x 0.05 = 0.3 V -> PGA ±0.512 V (kod 100).
+         * 1 LSB = 15.625 µV = 0.3125 mA. Çözünürlük aynı kalır.
+         * Doyum kanal başına 10.24 A.
+         * Formül: I_ch = (kod x 15.625 µV - ofset_ch) / 0.05 Ohm x kazanç_ch.
+       Ters batarya (bölüm 8 / H3): body diyotları üzerinden kısa devre
+       direnci yarıya iner. 3 V'luk hücrede ~46 A yerine ~92 A.
+       Düşük gerilim: kanal başına 5 A'de şönt düşümü 0.5 V -> 0.25 V;
+       cihaz daha düşük gerilimli kaynakları yükleyebilir.
+       Şematik değişikliği (UYGULANDI 20.10.2026; PCB'de yerleşim bekliyor):
+         * R18 ve R19'a paralel birer VMS-R100 eklenir (yeni R116, R117,
+           aynı 2512 footprint).
+         * NetTie'ler (NT1-NT4) iki direncin ortak düğümüne alınır.
+           Kelvin uçları simetrik noktadan çıkar; tek direncin pad'inden
+           alınırsa okuma kayar.
+         * R2: 10k -> 22k.
+         * Firmware: 6. bölüm (k = 0.0909, 1 LSB 1.47 mA) ve 7.1 (PGA
+           ±0.512 V, 0.05 Ohm) güncellenir.
 
 
 -------------------------------------------------------------------------------
@@ -786,7 +913,38 @@ ama ELV1 tamsayı kullanıyordu.
          (sadece 5V TPS54302 kalır).
  [x] J4.8 / J4.14 GND'ye geri bağlandı (H16).
  [ ] Şebeke girişine X kondansatörü boşaltma direnci eklenecek, PE bağlantısı
-     kontrol edilecek (H14). ELV1'de de yapılmalı.
+     kontrol edilecek (H14). ELV1'de 1 MΩ 1 W takıldı (20.10.2026);
+     revizyonda yapılacak.
+ [x] Şönt ısınması (H18): R116/R117 (VMS-R100) R18/R19'a paralel, R2 22k.
+     Şematikte uygulandı (20.10.2026).
+ [ ] PCB: R116/R117 yerleşimi. Kelvin (NT1-NT4) iki direncin ortak
+     düğümünden, simetrik; her pad'e geniş bakır ve termal via.
+ [ ] J4 (20 pin, 2x10, 2.00 mm) konnektör tedariki (18.10.2026):
+     - KLS L-KLS1-XL4-2.00-2X10-H housing (KLS çiziminde "PHB 2.0") Özdisan,
+       Uraz ve KomponentStore'da stok 0.
+     - KLS gövdesi JST PHD ya da PUD ile birebir aynı değil:
+         KLS housing 22.7 x 8.6 x 8.4 mm
+         PHDR-20VS   21.9 x 5.0 x 7.3 mm
+         PUDP-20V-S  22.0 x 8.3 x 9.1 mm
+       Housing'ler birbirinin başlığına takılmaz; başlık + housing + terminal
+       aynı seriden alınmalı.
+     - Footprint (JST_PUD_B20B-PUDSS) ped ızgarası PHD/PUD/KLS üçünde de
+       aynı: 2 x 2 mm, delik Ø0.75. PCB değişmeden JST PHD takılabilir.
+     - Mouser TR'de stokta olan set:
+         B20B-PHDSS-B(LF)(SN) başlık: 744 stok, 0,58 €
+         PHDR-20VS housing:           15.073 stok, 0,28 €
+         SPHD-001T-P0.5 terminal:     319.492 stok, 0,09 € (AWG 26-22)
+     - PUDP-20V-S Mouser'da stok 0 (17.11.2026 bekleniyor).
+     - KARAR (18.10.2026, kullanıcı): konnektör DEĞİŞMEZ.
+         * KLS PHB 2.0 kalır.
+         * J4'ü PHD'ye çeviren commit (97f4282) geri alındı; footprint yine
+           JST_PUD_B20B-PUDSS.
+         * Gereken: KLS başlığa uyan bir PHB 2.0 2x10 housing (KLS ya da
+           başka marka PHB 2.0 klonu) ve terminali.
+         * Klon alınacaksa ölçüleri KLS çizimiyle karşılaştır:
+           22.7 x 8.6 x 8.4 mm, kilit yanda.
+     - 3D baskı önerilmez: 2 mm aralıkta terminal kilit dilleri ~0.3 mm et
+       kalınlığı ister. FDM'de olmaz, reçinede kırılgan olur.
 
 ===============================================================================
  Son güncelleme: 18.10.2026
