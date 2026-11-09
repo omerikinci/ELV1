@@ -68,13 +68,13 @@ Bu yüzden firmware'de `LOAD_PATH_ON()` / `LOAD_PATH_OFF()` makroları kart baş
 
 ## 4. Boşta kalan pinler
 
-Yedek pinler (18.10.2026 itibarıyla 13 adet, ERC ile doğrulandı; PF0/PF1 HSE kristale bağlı):
+Yedek pinler (18.10.2026 itibarıyla 15 adet, ERC ile doğrulandı; PF0/PF1 HSE kristale bağlı):
 
 - PC13, PC14, PC15
 - PA1 (ADC, TIM2_CH2) — **PA0 artık yedek değil: `/20V SENSE`'e bağlı (18.10.2026)**
 - PA4 (DAC1_OUT1), PA5 (DAC1_OUT2)
 - PA8 (UCPD1_CC1, dead-battery notu)
-- PB2 — **PB1 ve PB3 artık yedek değil: ADS1115 ALERT/RDY hatlarına gitti (bkz. 10.7)**
+- PB1, PB2, PB3
 - PB8
 - PD0–PD3
 
@@ -468,7 +468,7 @@ U9 bloğu kopyalandı; kopya U21 oldu (adres 0x49, ADDR → "ADS2 VDD").
 
 PA3 yolundaki eski sorun da çözülmüş: bölücü Thevenin'i artık 47k‖3.3k = **3.08 kΩ** (eskiden 31 kΩ), yani 12 bit / 79.5 cycle için izin verilen R_AIN sınırının içinde (bkz. 10.3, madde 5).
 
-**Dokümandan sapmalar** (hepsi 18.10.2026'da giderildi, bkz. 10.7):
+**Dokümandan sapmalar — karar bekliyor:**
 
 | # | Durum | Etki |
 |---|---|---|
@@ -502,49 +502,4 @@ rsync -a hardware/libraries/footprints/ ~/Documents/Elektronik/Library/footprint
 ```
 
 Eski global tabloların ve kütüphanelerin yedeği: `~/Documents/Elektronik/Library-yedek-2026-10-18/`.
-
-### 10.7 10.5'teki sapmalar giderildi (18.10.2026)
-
-Dört değişiklik şemaya işlendi. Her biri `kicad-cli sch export netlist` ile doğrulandı; netlist orijinaliyle net-net karşılaştırıldı ve **amaçlananlar dışında hiçbir netin node listesi değişmedi**.
-
-**1 — Filtre kondansatörleri C0G oldu**
-
-| Referans | Önce | Sonra |
-|---|---|---|
-| C76, C80 (diferansiyel) | 220 nF X7R | **100 nF C0G** |
-| C74, C75, C77, C78 (ortak mod) | 22 nF X7R | **10 nF C0G** |
-
-C_diff / C_cm oranı 10 olarak korundu (ortak moddan diferansiyele dönüşümü bastırmak için).
-
-**2 — MUX yerleşme süresi kısaldı**
-
-Diferansiyel çevrimin seri direnci değişmedi: 3.083 kΩ + R105 100 Ω + R106 100 Ω + 3.083 kΩ ≈ **6.37 kΩ**. C 220 nF'den 100 nF'ye indiği için τ 1.40 ms → **0.64 ms**. 16 bit yerleşme (~10τ) 14 ms → **~6.4 ms**. 860 SPS'te kanal çifti değiştirdikten sonra atılması gereken çevrim sayısı ~12'den ~6'ya düştü. Ortak mod zaman sabiti (3.18 kΩ × 10 nF) ≈ 32 µs.
-
-**3 — BAT54S clamp'ler eklendi**
-
-| Referans | COM (pin 3) | A (pin 1) | K (pin 2) | Footprint |
-|---|---|---|---|---|
-| **D17** | `/LOAD VOLTAGE` | GND | +3.3V | `Package_TO_SOT_SMD:SOT-23` |
-| **D18** | `/VS-` | GND | +3.3V | `Package_TO_SOT_SMD:SOT-23` |
-
-Clamp'ler R105/R108 ve R106'dan **önce**, bölücü çıkış düğümlerine bağlandı. Bu yüzden U21'in AIN girişlerini olduğu kadar **PA3'ü de** koruyorlar — 10.5'teki asıl kaygı buydu. BAT54S seri bağlı çift Schottky'dir: A→COM diyodu sinyal GND'nin altına inince GND'den akım basar, COM→K diyodu sinyal 3.3 V'u aşınca akımı rayla boşaltır.
-
-**4 — ALERT/RDY hatları işlemciye alındı**
-
-| ADS | Adres | Rol | Net | MCU pini | EXTI |
-|---|---|---|---|---|---|
-| U9 | 0x48 | akım | `/ADS1 RDY` | **PB1** (pin 20) | EXTI1 |
-| U21 | 0x49 | gerilim | `/ADS2 RDY` | **PB3** (pin 42) | EXTI3 |
-
-Mevcut R32 / R109 pull-up'ları yerinde kaldı; her net artık pull-up + ADS ALERT + MCU pini olmak üzere 3 düğümlü.
-
-**PB2 bilinçli olarak kullanılmadı.** 10.3'ün firmware önerisinde geçen "PB1/PB2" çifti hatalı: PB2 EXTI2'ye düşüyor ve RCP (PA2, EXTI2) ile çakışıyor — Bölüm 1'deki TACT notu bu çakışmayı zaten tespit etmişti. EXTI1 ve EXTI3 boş olduğu için PB1/PB3 seçildi. Böylece iki ADS'nin dönüşüm-hazır kesmesi birbirinden ve mevcut EXTI hatlarından (2, 4, 5, 7, 13, 14, 15) bağımsız.
-
-**Yapılmayanlar / dikkat:**
-
-- **PCB güncellenmedi.** KiCad'de şemayı açıp **Tools → Update PCB from Schematic** çalıştırmak gerekiyor. D17/D18 elle yerleştirilmeli: clamp'ler koruduğu düğüme (R54/R55 ve R101/R102 bölücü çıkışlarına) ve 3.3 V / GND'ye olabildiğince yakın olmalı, yoksa iz endüktansı clamp'in hızlı darbelerdeki etkisini düşürür.
-- Şemadaki D17/D18 ve güç sembolleri boş bir alana (x ≈ 551–620, y ≈ 256–274) yerleştirildi; KiCad'de istediğin yere taşıyabilirsin, bağlantılar etiket üzerinden kurulu olduğu için taşımak bağlantıyı bozmaz.
-- ERC toplamı 103 → 104. Fark: iki yeni hierarchical label (+2), PB1/PB3 artık bağlı (−2), ve ERC'nin aynı metinli ihlalleri numaralandırmasında açıklayamadığım bir kayma (+1: `TX` ile `RX` listeye girdi, `TACT1` çıktı). Bu üç netin node listeleri netlist karşılaştırmasında **birebir aynı** kaldı, yani elektriksel bir değişiklik değil.
-- Değişiklik öncesi şematik: `ELV1 revision-backups/ELV1 revision_before_claude_10.5_2026-10-18.kicad_sch`.
-
 
