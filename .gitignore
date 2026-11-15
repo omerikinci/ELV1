@@ -24,6 +24,7 @@ Desktop.ini
 
 # KiCad
 *-backups/
+**/.history/
 *.kicad_prl
 *.kicad_sch-bak
 *.bak
