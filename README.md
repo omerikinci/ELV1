@@ -12,8 +12,6 @@ Proje detayları ve görseller: https://omerikinci.com/projects/electronic-dummy
 | `firmware/` | STM32G030F6 için STM32CubeIDE projesi (`ilkdeneme`). Final kod: `firmware/Core/Src/main.c` |
 | `firmware-history/2026-04-27-stable/` | 27.04.2026 tarihli önceki stabil `main.c` |
 | `hardware/ELV1/` | KiCad şema ve PCB (`ELV1`, eski adıyla `Electronic Load`), PCB görselleri, projeye özel sembol kütüphanesi. Şema orijinal tasarımı gösterir; karttaki farklar aşağıda. |
-| `hardware/ELV1-revision/` | ELV1'in revizyon kartı (tasarım aşamasında, STM32G071CBT6): KiCad şema ve PCB (`ELV1 revision`), G071 pin planı (`G071 pin plani.md`), firmware rehberi (`ELV1 revision - FIRMWARE REHBERI.txt`), görseller |
-| `hardware/libraries/` | Projelerde kullanılan özel KiCad sembol (`symbols/`) ve footprint (`footprints/`) kütüphaneleri |
 | `arduino-prototype/` | STM32'ye geçmeden önceki Arduino tabanlı ilk prototip (`koryukprojesi.ino`) |
 
 ## Firmware
@@ -28,7 +26,8 @@ Derlemek için `firmware/` klasörünü STM32CubeIDE'ye mevcut proje olarak içe
 ## ELV1'in final hali (şemadan farklar)
 
 ELV1 ilk cihazdır ve bu haliyle kalır. Sorunlar anlaşıldıkça yalnızca düzeltme yapılır.
-Yeni özellikler (USB/PC bağlantısı, pot yerine encoder vb.) ELV1 revision'a aittir.
+Yeni özellikler (USB/PC bağlantısı, pot yerine encoder vb.) ayrı repoya taşınan
+ELV1 revision'a aittir.
 
 `hardware/ELV1/ELV1.kicad_sch` **bilerek güncellenmedi**; orijinal tasarımı gösterir
 (4 MOSFET, 4 x 0.1 Ω şönt, LM358). Karttaki gerçek durum:
@@ -56,7 +55,8 @@ Yeni özellikler (USB/PC bağlantısı, pot yerine encoder vb.) ELV1 revision'a 
   - Önce geçici olarak 12 x 10 MΩ paralel (~790k) takıldı. Ancak paralel bağlı her direnç tam şebeke tepe gerilimini (~325 V) görür; 1/8 ve 1/4 W dirençler bu gerilim için uygun değil.
   - 20.10.2026'da bunların yerine tek 1 MΩ, 1 W, 500 V direnç (Royalohm MF02WJJ0105A19) takıldı.
 
-**Durum (20.10.2026):** ELV1 tamamlandı. Bir sorun çıkmadıkça açılmayacak; geliştirme ELV1 revision'da sürüyor.
+**Durum (20.10.2026):** ELV1 tamamlandı. Bir sorun çıkmadıkça açılmayacak; geliştirme
+ayrı `ELV1-revision` reposunda sürüyor.
 
 **Firmware'de buna göre ayarlananlar** (`firmware/Core/Src/main.c`):
 - Akım, iki kanalın tek uçlu okumalarının toplamıdır: ADS1115 AIN0 (U1) + AIN1 (U6), `CURRENT_ADS_CH_MASK 0x03`.
@@ -71,37 +71,21 @@ Yeni özellikler (USB/PC bağlantısı, pot yerine encoder vb.) ELV1 revision'a 
 **Ölçülen özellikler:**
 - Ters polarite algılaması 1.71 V'ta devreye giriyor.
 
-## ELV1 revision'ı başka bilgisayarda açmak (Windows / macOS)
+## Başka bilgisayarda açmak (Windows / macOS)
 
 1. Repoyu klonla:
    ```
    git clone https://github.com/omerikinci/ELV1.git
    ```
-2. KiCad 10 ile `hardware/ELV1-revision/ELV1 revision.kicad_pro` dosyasını aç.
-3. Özel kütüphaneler artık **global** tablodan yükleniyor (18.10.2026). Proje-içi
-   `sym-lib-table` / `fp-lib-table` dosyaları kaldırıldı, çünkü global tabloda aynı
-   isimler tanımlıyken KiCad çakışma uyarısı veriyordu.
-
-   Yeni bir bilgisayarda kurulum: `hardware/libraries/` içeriğini kalıcı bir yere kopyala
-   (bu makinede `~/Documents/Elektronik/Library/`), sonra KiCad'de
-   **Preferences → Manage Symbol Libraries / Manage Footprint Libraries → Global**
-   sekmesine şu isimlerle ekle:
-
-   | Sembol kütüphanesi | Footprint kütüphanesi |
-   | --- | --- |
-   | `myCONN`, `myCPU`, `myDiodes`, `myIC`, `myNMOS`, `myNTC`, `mySW` | `myNTC`, `myTO247`, `myFuse` |
-
-   Dikkat: eski isimler `my-NMOS` ve `mydiodes` kullanımdan kalktı; sırasıyla `myNMOS`
-   ve `myDiodes` oldu. `hardware/libraries/` sürüm kontrolündeki asıl kaynaktır —
-   global kopyayı ondan tazele, ters yönde değil.
-4. Çalışmaya başlamadan önce `git pull`, bitirince `git add` / `git commit` / `git push` yap.
+2. KiCad 10 ile `hardware/ELV1/ELV1.kicad_pro` dosyasını aç.
+3. Çalışmaya başlamadan önce `git pull`, bitirince `git add` / `git commit` / `git push` yap.
    İki bilgisayarda aynı anda aynı dosyayı düzenleme; KiCad dosyaları birleştirilemez.
 
 Not: `*-backups/`, `*.kicad_prl`, `fp-info-cache` ve kilit dosyaları `.gitignore` ile dışarıda tutulur.
 
-Bu makinedeki konum: `~/Documents/GitHub/ELV1-revision/` — GitHub Desktop'ın yönettiği
-klasörde, `ELV2` deposunun yanında. Bu repo git üzerinden çalışılır; KiCad projeleri
-`hardware/` altında.
+Bu makinedeki konum: `~/Documents/GitHub/ELV1/` — GitHub Desktop'ın yönettiği
+klasörde, `ELV1-revision` ve `ELV2` depolarının yanında. Bu repo git üzerinden
+çalışılır; KiCad projesi `hardware/ELV1/` altında.
 
 `~/Documents/Elektronik/Projeler/ElectronicLoad/` orada duran ayrı bir kopyadır ve bu
 repodaki `hardware/ELV1/` ile aynı kartın eski adıdır — hangisinin kalacağına karar

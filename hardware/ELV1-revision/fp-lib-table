@@ -1,4 +1,0 @@
-(fp_lib_table
-	(version 7)
-	(lib (name "myRES") (type "KiCad") (uri "${KIPRJMOD}/myRES.pretty") (options "") (descr ""))
-)
