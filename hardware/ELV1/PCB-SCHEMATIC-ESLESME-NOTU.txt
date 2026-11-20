@@ -1,0 +1,40 @@
+ELV1 PCB / şema bileşen eşleşmeleri — 21.11.2026
+
+Bu düzeltme yalnızca ELV1 projesine aittir; ELV1-revision kapsam dışıdır.
+Eksik komponent ekleme veya devreyi yeniden tasarlama işlemi yapılmadı.
+
+Düzeltmeler
+- Şemada proje adı boş olan 20 sembol örneği ELV1 projesine bağlandı.
+- J8 PCB footprint'i, şemadaki J8'in UUID'sine yeniden bağlandı.
+- Şemada başka parçalara verilmiş referansları kullanan eski PCB parçaları
+  ayrı adlandırıldı. Eski PCB referansı -> yeni PCB referansı:
+    R2 (10K) -> R65
+    R23 (100R) -> R66
+    R30 (10K) -> R67
+    R45 (1K) -> R68
+    U1 (TL431DBV) -> U14
+  Şemadaki R2/R23/R30/R45 şöntleri ile U1 MOSFET'in adları korundu.
+  Yeni PCB adları, bu eski parçaların şemada eşleştiği anlamına gelmez;
+  farklı parçaların referans üzerinden yanlış bağlanmasını engeller.
+- UUID ile eşleşen ortak bileşenlerin PCB değerleri şemayla eşitlendi:
+  R1=440K, R41=100K, R53=330R, R54=4.7K, R57=1K.
+- TL431'e ait otomatik net adları U14 referansına uyarlandı.
+- U14 referans yazısı yeni baskı çakışması yaratmamak için 0.8 mm yapıldı.
+
+Tekrar kontrol
+- PCB ile şemada eşleşen 132 bileşenin referansı, UUID'si, değeri ve
+  footprint kütüphane adı birbiriyle tutarlı.
+- Şema örneklerinin proje adı, kök sayfa UUID'si, referansı ve ünite
+  numarası kontrol edildi. Çok üniteli entegreler tek bileşen sayıldı.
+- PCB referansları benzersiz. Aynı referansı taşıyan farklı PCB/şema
+  bileşen kimliği bulunmuyor.
+- Şema netlistindeki bileşenler ve bağlantılar değişmedi.
+- PCB parça konumları, pad'ler, yollar, via'lar ve zone'lar korundu.
+- Önceki DRC sonucuna göre yeni ihlal oluşmadı.
+
+KiCad'de aktarım
+ELV1.kicad_pro dosyasını açın. Normal UUID eşleştirmesini kullanın;
+referansa göre yeniden bağlama seçeneğini kapalı tutun.
+PCB ve şema farklı devre durumlarını temsil ettiği için güncelleme hâlâ
+net ve parça değişiklikleri önerebilir. Bu işlem bunları uygulamaz.
+Üretilmiş cihazın farkları için deponun README dosyasına bakın.

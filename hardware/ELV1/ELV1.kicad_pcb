@@ -80,7 +80,7 @@
 	(net 0 "")
 	(net 1 "/5V")
 	(net 2 "/3.3V")
-	(net 3 "Net-(U1-REF)")
+	(net 3 "Net-(U14-REF)")
 	(net 4 "/20V")
 	(net 5 "Net-(D2-K)")
 	(net 6 "/AR3")
@@ -143,7 +143,7 @@
 	(net 63 "Net-(J4-Pin_14)")
 	(net 64 "Net-(J4-Pin_2)")
 	(net 65 "/OCS")
-	(net 66 "Net-(U1-K)")
+	(net 66 "Net-(U14-K)")
 	(net 67 "Net-(D4-A)")
 	(net 68 "/DRAIN SIDE")
 	(net 69 "Net-(U7-ALERT{slash}RDY)")
@@ -1344,7 +1344,7 @@
 				)
 			)
 		)
-		(property "Value" "1K"
+		(property "Value" "100K"
 			(at 0 1.65 0)
 			(layer "F.Fab")
 			(uuid "19582f33-a065-4068-9c2b-1d0b36c36d68")
@@ -1888,7 +1888,7 @@
 				)
 			)
 		)
-		(property "Value" "22K"
+		(property "Value" "440K"
 			(at 0 1.65 90)
 			(layer "F.Fab")
 			(uuid "ab7bbaff-ffab-4370-a2ab-4fd12ab204a3")
@@ -2053,7 +2053,7 @@
 			(size 1.025 1.4)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.243902)
-			(net 66 "Net-(U1-K)")
+			(net 66 "Net-(U14-K)")
 			(pintype "passive")
 			(uuid "b84140d1-ca9a-4d34-bc71-70f8025714ff")
 		)
@@ -3432,7 +3432,7 @@
 		(at 135.9675 109.995 90)
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
-		(property "Reference" "R2"
+		(property "Reference" "R65"
 			(at 0 -3.5875 90)
 			(layer "F.SilkS")
 			(uuid "1e5f8d17-08ff-4330-a90c-1267593f6e44")
@@ -3608,7 +3608,7 @@
 			(size 1.025 1.4)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.243902)
-			(net 66 "Net-(U1-K)")
+			(net 66 "Net-(U14-K)")
 			(pintype "passive")
 			(uuid "f35f1c17-4f76-4c82-83eb-483935083fed")
 		)
@@ -6758,13 +6758,13 @@
 		(at 138.7075 110.2375 -90)
 		(descr "SOT, 5 Pin (JEDEC MO-178 Var AA https://www.jedec.org/document_search?search_api_views_fulltext=MO-178), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOT TO_SOT_SMD")
-		(property "Reference" "U1"
+		(property "Reference" "U14"
 			(at -2.6425 0.6525 180)
 			(layer "F.SilkS")
 			(uuid "119350e9-f01c-4fd3-8561-1a2a9a17da87")
 			(effects
 				(font
-					(size 1 1)
+					(size 0.8 0.8)
 					(thickness 0.15)
 				)
 			)
@@ -7053,7 +7053,7 @@
 			(size 1.325 0.6)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net 66 "Net-(U1-K)")
+			(net 66 "Net-(U14-K)")
 			(pinfunction "K")
 			(pintype "passive")
 			(uuid "f98d244f-ff58-46dc-a44b-f177ba3f0359")
@@ -7063,7 +7063,7 @@
 			(size 1.325 0.6)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net 3 "Net-(U1-REF)")
+			(net 3 "Net-(U14-REF)")
 			(pinfunction "REF")
 			(pintype "passive")
 			(uuid "678862ad-5a7f-43f4-865e-21a06c771284")
@@ -7695,7 +7695,7 @@
 		(at 118.63 117.68 180)
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
-		(property "Reference" "R45"
+		(property "Reference" "R68"
 			(at 0 -2.865 0)
 			(layer "F.SilkS")
 			(uuid "ecb8a2c2-ce6e-43c2-ac16-85ee9e7b0cb4")
@@ -10169,7 +10169,7 @@
 				)
 			)
 		)
-		(property "Value" "power in (outside) for batteries"
+		(property "Value" "power in (outside for batteries)"
 			(at 3.6 5.4 0)
 			(layer "F.Fab")
 			(uuid "17ea6a96-9f76-4d1c-baec-0a2f6c5ca21e")
@@ -10207,7 +10207,7 @@
 			)
 		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
-		(path "/073af81c-c739-49f0-b263-e1176dd0c904")
+		(path "/554ad649-efef-4ddd-8fbd-32d715a342ca")
 		(sheetname "/")
 		(sheetfile "ELV1.kicad_sch")
 		(attr through_hole)
@@ -14276,7 +14276,7 @@
 				)
 			)
 		)
-		(property "Value" "10R"
+		(property "Value" "330R"
 			(at 0 1.65 180)
 			(layer "F.Fab")
 			(uuid "15d97d38-b7c9-4d9f-b4f1-10ad56ef1029")
@@ -14631,7 +14631,7 @@
 			(size 1 1.45)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net 3 "Net-(U1-REF)")
+			(net 3 "Net-(U14-REF)")
 			(pintype "passive")
 			(uuid "b69d8f3d-c8dc-4f31-a6b0-2cc4cde1ed8e")
 		)
@@ -24281,7 +24281,7 @@
 				)
 			)
 		)
-		(property "Value" "100R"
+		(property "Value" "1K"
 			(at 0 1.65 180)
 			(layer "F.Fab")
 			(uuid "07519169-e990-412a-bf36-8fcc5fc16487")
@@ -24867,7 +24867,7 @@
 		(at 145.27 99.4775 -90)
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
-		(property "Reference" "R30"
+		(property "Reference" "R67"
 			(at -0.0075 1.64 90)
 			(layer "F.SilkS")
 			(uuid "e990ab84-ac9e-4a1d-9f31-9a73ba775de3")
@@ -27512,7 +27512,7 @@
 				)
 			)
 		)
-		(property "Value" "1K"
+		(property "Value" "4.7K"
 			(at 0 1.65 180)
 			(layer "F.Fab")
 			(uuid "857a5646-bc22-4826-b5d7-f67bdad2cb35")
@@ -34483,7 +34483,7 @@
 		(at 167.495 125.0025 180)
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
-		(property "Reference" "R23"
+		(property "Reference" "R66"
 			(at 0 -3.0425 0)
 			(layer "B.SilkS")
 			(uuid "59115a24-4237-4ea3-a340-65a8c559c24a")
